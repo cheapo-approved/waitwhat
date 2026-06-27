@@ -1,6 +1,10 @@
 import Link from "next/link";
+import { getAllStories } from "@/lib/getStory";
 
 export default function Header() {
+  const stories = getAllStories();
+  const randomStory = stories[Math.floor(Math.random() * stories.length)];
+
   return (
     <header className="border-b">
       <div className="mx-auto flex max-w-5xl items-center justify-between px-5 py-5 sm:px-8">
@@ -13,7 +17,7 @@ export default function Header() {
             Discoveries
           </Link>
 
-          <Link href="/random" className="hover:underline">
+          <Link href={`/story/${randomStory.slug}`} className="hover:underline">
             Random
           </Link>
         </nav>
