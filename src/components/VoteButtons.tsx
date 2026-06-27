@@ -17,7 +17,7 @@ export default function VoteButtons({
             disabled={!!userVote}
             className="rounded-xl border px-8 py-4 font-bold disabled:opacity-50"
           >
-            WAIT {counts.WAIT}
+            WAIT... {counts.WAIT}
           </button>
         </form>
 
@@ -26,14 +26,15 @@ export default function VoteButtons({
             disabled={!!userVote}
             className="rounded-xl bg-black px-8 py-4 font-bold text-white disabled:opacity-50"
           >
-            WHAT {counts.WHAT}
+            WHAT?! {counts.WHAT}
           </button>
         </form>
       </div>
 
       {userVote && (
         <p className="mt-4 text-sm text-gray-500">
-          You voted {userVote}.
+          ✓ You voted{" "}
+          <strong>{userVote === "WAIT" ? "WAIT..." : "WHAT?!"}</strong>
         </p>
       )}
     </div>
