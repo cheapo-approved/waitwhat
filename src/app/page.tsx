@@ -5,6 +5,7 @@ import { getAllStories } from "@/lib/getStory";
 export default function Home() {
   const stories = getAllStories();
   const featured = stories.find((story) => story.featured) ?? stories[0];
+  const otherStories = stories.filter((story) => story.slug !== featured.slug);
 
   return (
     <PageShell>
@@ -28,6 +29,20 @@ export default function Home() {
             </h2>
             <StoryCard story={featured} />
           </div>
+
+          {otherStories.length > 0 && (
+            <div className="mt-16">
+              <h2 className="mb-6 text-3xl font-black sm:text-4xl">
+                More Discoveries
+              </h2>
+
+              <div className="space-y-6">
+                {otherStories.map((story) => (
+                  <StoryCard key={story.slug} story={story} />
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </main>
     </PageShell>
