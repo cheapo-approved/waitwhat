@@ -2,6 +2,7 @@ import Link from "next/link";
 import VoteButtons from "@/components/VoteButtons";
 import PageShell from "@/components/PageShell";
 import { getStory } from "@/lib/getStory";
+import { getVoteCounts } from "@/lib/votes";
 import { notFound } from "next/navigation";
 
 export default async function StoryPage({
@@ -13,6 +14,8 @@ export default async function StoryPage({
   const story = getStory(slug);
 
   if (!story) notFound();
+
+  const counts = await getVoteCounts(story.slug);
 
   return (
     <PageShell>
@@ -47,7 +50,7 @@ export default async function StoryPage({
 
           <h2 className="text-3xl font-bold">Where was I?</h2>
 
-          <VoteButtons />
+          <VoteButtons storySlug={story.slug} counts={counts} />
         </div>
       </main>
     </PageShell>
