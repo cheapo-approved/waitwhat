@@ -1,4 +1,4 @@
-import { stories } from "@/data/stories";
+import { getStory } from "@/lib/getStory";
 import { notFound } from "next/navigation";
 
 export default async function StoryPage({
@@ -7,7 +7,7 @@ export default async function StoryPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const story = stories.find((story) => story.slug === slug);
+  const story = getStory(slug);
 
   if (!story) {
     notFound();

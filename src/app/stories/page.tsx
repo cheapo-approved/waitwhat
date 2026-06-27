@@ -1,8 +1,9 @@
 import Link from "next/link";
-import { stories } from "@/data/stories";
+import { getAllStories } from "@/lib/getStory";
 
 export default function StoriesPage() {
-  return (
+    const stories = getAllStories();  
+    return (
     <main className="min-h-screen bg-white text-black">
       <div className="mx-auto max-w-4xl px-8 py-20">
         <Link href="/" className="text-sm text-gray-500">
