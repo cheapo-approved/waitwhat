@@ -12,6 +12,10 @@ export default function Header() {
           <Link href="/stories" className="hover:underline">
             Discoveries
           </Link>
+
+          <Link href="/random" className="hover:underline">
+            Random
+          </Link>
         </nav>
       </div>
     </header>
