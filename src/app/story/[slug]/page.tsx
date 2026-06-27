@@ -1,3 +1,5 @@
+import Link from "next/link";
+import VoteButtons from "@/components/VoteButtons";
 import { getStory } from "@/lib/getStory";
 import { notFound } from "next/navigation";
 
@@ -9,14 +11,16 @@ export default async function StoryPage({
   const { slug } = await params;
   const story = getStory(slug);
 
-  if (!story) {
-    notFound();
-  }
+  if (!story) notFound();
 
   return (
     <main className="min-h-screen bg-white text-black">
       <div className="mx-auto max-w-3xl px-8 py-20">
-        <p className="text-sm uppercase tracking-widest text-gray-500">
+        <Link href="/stories" className="text-sm text-gray-500">
+          ← Discoveries
+        </Link>
+
+        <p className="mt-10 text-sm uppercase tracking-widest text-gray-500">
           {story.category}
         </p>
 
@@ -41,12 +45,7 @@ export default async function StoryPage({
 
         <h2 className="text-3xl font-bold">Where was I?</h2>
 
-        <div className="mt-10 flex gap-4">
-          <button className="rounded-xl border px-8 py-4">WAIT</button>
-          <button className="rounded-xl bg-black px-8 py-4 text-white">
-            WHAT
-          </button>
-        </div>
+        <VoteButtons />
       </div>
     </main>
   );
