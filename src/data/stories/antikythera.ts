@@ -8,6 +8,32 @@ export const antikythera: Story = {
   featured: true,
   summary:
     "A corroded lump sat ignored for decades. Then X-rays revealed something ancient Greece wasn't supposed to have.",
+  hero: {
+    src: "/images/antikythera/hero.jpg",
+    alt: "A sponge diver discovering an ancient shipwreck in the Mediterranean",
+    caption:
+      "The story begins underwater, with divers finding treasure... and one ugly lump nobody understood.",
+  },
+  images: [
+    {
+      src: "/images/antikythera/lump.jpg",
+      alt: "The corroded Antikythera Mechanism fragment",
+      caption:
+        "For decades, this corroded bronze object looked more like scrap than one of history's greatest machines.",
+    },
+    {
+      src: "/images/antikythera/xray.jpg",
+      alt: "X-ray image showing gears inside the Antikythera Mechanism",
+      caption:
+        "The X-rays changed everything. Inside the lump were precision-cut gears.",
+    },
+    {
+      src: "/images/antikythera/reconstruction.jpg",
+      alt: "Modern reconstruction of the Antikythera Mechanism",
+      caption:
+        "Researchers eventually realized the machine could track the heavens.",
+    },
+  ],
   body: [
     "Let's play a game.",
     "You're standing on the deck of a ship in 1901.",
