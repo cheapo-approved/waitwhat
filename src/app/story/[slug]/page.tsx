@@ -1,8 +1,5 @@
-import { cookies } from "next/headers";
-import VoteButtons from "@/components/VoteButtons";
 import PageShell from "@/components/PageShell";
 import { getStory } from "@/lib/getStory";
-import { getVoteCounts } from "@/lib/votes";
 import { notFound } from "next/navigation";
 import type { StoryImage as StoryImageType } from "@/types/story";
 
@@ -19,11 +16,7 @@ function StoryImageBlock({
         <img
           src={image.src}
           alt={image.alt}
-          className={
-            hero
-              ? "aspect-video w-full object-cover"
-              : "h-auto w-full"
-          }
+          className={hero ? "aspect-video w-full object-cover" : "h-auto w-full"}
         />
       </div>
 
@@ -43,13 +36,6 @@ export default async function StoryPage({
   const story = getStory(slug);
 
   if (!story) notFound();
-
-  const counts = await getVoteCounts(story.slug);
-  const cookieStore = await cookies();
-  const userVote = cookieStore.get(`waitwhat-voted-${story.slug}`)?.value as
-    | "WAIT"
-    | "WHAT"
-    | undefined;
 
   const imagesByIndex = new Map<number, StoryImageType>();
 
@@ -115,11 +101,15 @@ export default async function StoryPage({
             <section>
               <h2 className="text-4xl font-black">Where Was I?</h2>
 
-              <VoteButtons
-                storySlug={story.slug}
-                counts={counts}
-                userVote={userVote}
-              />
+              <div className="mt-10 flex gap-4">
+                <button className="rounded-xl border px-8 py-4 font-bold">
+                  WAIT...
+                </button>
+
+                <button className="rounded-xl bg-black px-8 py-4 font-bold text-white">
+                  WHAT?!
+                </button>
+              </div>
             </section>
           </section>
         </article>
