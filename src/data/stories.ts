@@ -1,10 +1,4 @@
-export interface Story {
-  slug: string;
-  title: string;
-  category: string;
-  readTime: string;
-  body: string[];
-}
+import type { Story } from "@/types/story";
 
 export const stories: Story[] = [
   {
@@ -17,7 +11,7 @@ export const stories: Story[] = [
       "They orbited the Moon aboard Apollo 14 while astronaut Stuart Roosa carried them as part of a forestry experiment.",
       "After returning to Earth, the seeds were planted across the United States.",
       "Many are still alive today.",
-      "There are trees growing today that have been to the Moon."
-    ]
-  }
+      "There are trees growing today that have been to the Moon.",
+    ],
+  },
 ];

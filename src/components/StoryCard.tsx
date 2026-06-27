@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { Story } from "@/data/stories";
+import type { Story } from "@/types/story";
 
 export default function StoryCard({ story }: { story: Story }) {
   return (
