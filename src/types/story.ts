@@ -2,6 +2,7 @@ export interface StoryImage {
   src: string;
   alt: string;
   caption: string;
+  after?: number;
 }
 
 export interface Story {
