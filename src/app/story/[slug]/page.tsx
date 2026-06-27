@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { cookies } from "next/headers";
 import VoteButtons from "@/components/VoteButtons";
 import PageShell from "@/components/PageShell";
 import { getStory } from "@/lib/getStory";
@@ -16,6 +17,11 @@ export default async function StoryPage({
   if (!story) notFound();
 
   const counts = await getVoteCounts(story.slug);
+  const cookieStore = await cookies();
+  const userVote = cookieStore.get(`waitwhat-voted-${story.slug}`)?.value as
+    | "WAIT"
+    | "WHAT"
+    | undefined;
 
   return (
     <PageShell>
@@ -50,7 +56,7 @@ export default async function StoryPage({
 
           <h2 className="text-3xl font-bold">Where was I?</h2>
 
-          <VoteButtons storySlug={story.slug} counts={counts} />
+          <VoteButtons storySlug={story.slug} counts={counts} userVote={userVote} />
         </div>
       </main>
     </PageShell>
