@@ -15,7 +15,7 @@ export default function VoteButtons({
         <form action={submitVote.bind(null, storySlug, "WAIT")}>
           <button
             disabled={!!userVote}
-            className="rounded-xl border px-8 py-4 font-bold disabled:opacity-50"
+            className="cursor-pointer rounded-xl border px-8 py-4 font-bold transition hover:-translate-y-0.5 hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:translate-y-0 disabled:hover:shadow-none"
           >
             WAIT... {counts.WAIT}
           </button>
@@ -24,7 +24,7 @@ export default function VoteButtons({
         <form action={submitVote.bind(null, storySlug, "WHAT")}>
           <button
             disabled={!!userVote}
-            className="rounded-xl bg-black px-8 py-4 font-bold text-white disabled:opacity-50"
+            className="cursor-pointer rounded-xl bg-black px-8 py-4 font-bold text-white transition hover:-translate-y-0.5 hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:translate-y-0 disabled:hover:shadow-none"
           >
             WHAT?! {counts.WHAT}
           </button>

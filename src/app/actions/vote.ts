@@ -4,23 +4,29 @@ import { cookies } from "next/headers";
 import { revalidatePath } from "next/cache";
 import { addVote } from "@/lib/votes";
 
-export async function submitVote(storySlug: string, vote: "WAIT" | "WHAT") {
+async function getOrCreateVoterId() {
   const cookieStore = await cookies();
-  const cookieName = `waitwhat-voted-${storySlug}`;
+  const existing = cookieStore.get("waitwhat_voter_id")?.value;
 
-  const existingVote = cookieStore.get(cookieName);
+  if (existing) return existing;
 
-  if (existingVote) {
-    return;
-  }
+  const voterId = crypto.randomUUID();
 
-  await addVote(storySlug, vote);
-
-  cookieStore.set(cookieName, vote, {
-    path: "/",
-    maxAge: 60 * 60 * 24 * 365,
+  cookieStore.set("waitwhat_voter_id", voterId, {
+    httpOnly: true,
     sameSite: "lax",
+    secure: process.env.NODE_ENV === "production",
+    maxAge: 60 * 60 * 24 * 365,
   });
 
+  return voterId;
+}
+
+export async function submitVote(storySlug: string, vote: "WAIT" | "WHAT") {
+  const voterId = await getOrCreateVoterId();
+
+  await addVote(storySlug, vote, voterId);
+
   revalidatePath(`/story/${storySlug}`);
+  revalidatePath("/");
 }

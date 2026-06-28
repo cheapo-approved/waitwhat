@@ -1,27 +1,40 @@
-import { db } from "@/db";
-import { votes } from "@/db/schema";
-import { eq, sql } from "drizzle-orm";
+import { supabase } from "@/lib/supabase";
 
-export async function addVote(storySlug: string, vote: "WAIT" | "WHAT") {
-  await db.insert(votes).values({
-    storySlug,
-    vote,
-    createdAt: new Date(),
-  });
+export type VoteChoice = "WAIT" | "WHAT";
+
+export async function addVote(
+  storySlug: string,
+  vote: VoteChoice,
+  voterId: string
+) {
+  const { error } = await supabase.from("story_votes").upsert(
+    {
+      story_slug: storySlug,
+      vote: vote.toLowerCase(),
+      voter_id: voterId,
+    },
+    {
+      onConflict: "story_slug,voter_id",
+    }
+  );
+
+  if (error) {
+    throw new Error(error.message);
+  }
 }
 
 export async function getVoteCounts(storySlug: string) {
-  const rows = await db
-    .select({
-      vote: votes.vote,
-      count: sql<number>`count(*)`,
-    })
-    .from(votes)
-    .where(eq(votes.storySlug, storySlug))
-    .groupBy(votes.vote);
+  const { data, error } = await supabase
+    .from("story_votes")
+    .select("vote")
+    .eq("story_slug", storySlug);
+
+  if (error) {
+    throw new Error(error.message);
+  }
 
   return {
-    WAIT: rows.find((row) => row.vote === "WAIT")?.count ?? 0,
-    WHAT: rows.find((row) => row.vote === "WHAT")?.count ?? 0,
+    WAIT: data.filter((row) => row.vote === "wait").length,
+    WHAT: data.filter((row) => row.vote === "what").length,
   };
 }
