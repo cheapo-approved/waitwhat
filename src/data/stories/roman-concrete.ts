@@ -5,7 +5,7 @@ export const romanConcrete: Story = {
   title: "Everyone Thought It Was a Mistake.",
   category: "Ancient & History",
   readTime: "4 min read",
-  featured: false,
+  featured: true,
   summary: "What if one of history's greatest engineering secrets never disappeared?",
 
   hero: {

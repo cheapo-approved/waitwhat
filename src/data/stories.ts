@@ -1,10 +1,10 @@
 import type { Story } from "@/types/story";
-import { antikythera } from "@/data/stories/antikythera";
-import { gameline } from "@/data/stories/gameline";
 import { romanConcrete } from "@/data/stories/roman-concrete";
+import { gameline } from "@/data/stories/gameline";
+import { antikythera } from "@/data/stories/antikythera";
 
 export const stories: Story[] = [
-  antikythera,
-  gameline,
   romanConcrete,
+  gameline,
+  antikythera,
 ];
