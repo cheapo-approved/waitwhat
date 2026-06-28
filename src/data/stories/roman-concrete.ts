@@ -31,7 +31,7 @@ export const romanConcrete: Story = {
       src: "/images/roman-concrete/3.jpg",
       after: 54,
       alt: "Weathered ancient Roman concrete still standing after centuries",
-      caption: "The mistake may have been the reason it survived.",
+      caption: "Sometimes the thing that looks wrong... is exactly what makes it last.",
     },
   ],
 
