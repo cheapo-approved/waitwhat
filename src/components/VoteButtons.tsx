@@ -10,7 +10,7 @@ export default function VoteButtons({
   userVote?: "WAIT" | "WHAT";
 }) {
   const total = counts.WAIT + counts.WHAT;
-  const hasVoted = !!userVote;
+  const hasVoted = !!userVote || total > 0;
 
   const waitPercent =
     total === 0 ? 0 : Math.round((counts.WAIT / total) * 100);
