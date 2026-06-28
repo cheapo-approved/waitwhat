@@ -1,36 +1,38 @@
+import Image from "next/image";
 import Link from "next/link";
-import { getAllStories } from "@/lib/getStory";
 
-export default function Header() {
-  const stories = getAllStories();
-  const random = stories[Math.floor(Math.random() * stories.length)];
-
+export default function PageShell({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <header className="border-b bg-white">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3 sm:px-8">
-        <div>
-          <Link href="/" className="text-4xl font-black tracking-tight">
-            WAITWHAT
-          </Link>
+    <>
+      <header className="border-b border-gray-200">
 
-          <p className="mt-1 text-xs font-bold uppercase tracking-[0.18em] text-gray-600">
-            Recover Wonder.
-          </p>
+        {/* Logo */}
+        <div className="mx-auto max-w-6xl px-5 pt-6 pb-3 flex justify-center">
+          <Link href="/">
+            <Image
+              src="/brand/waitwhat-logo.png"
+              alt="WAIT...WHAT?!"
+              width={520}
+              height={120}
+              priority
+              className="w-auto h-14 md:h-20"
+            />
+          </Link>
         </div>
 
-        <nav className="flex items-center gap-6 text-xs font-semibold uppercase tracking-wider sm:gap-8 sm:text-sm">
-          <Link href="/stories" className="transition-opacity hover:opacity-60">
-            Discoveries
-          </Link>
+        {/* Navigation */}
+        <div className="mx-auto max-w-6xl px-5 pb-4 flex justify-end gap-10 text-sm font-semibold uppercase tracking-[0.18em]">
+          <Link href="/">Discoveries</Link>
+          <Link href="/random">Random</Link>
+        </div>
 
-          <Link
-            href={`/story/${random.slug}`}
-            className="transition-opacity hover:opacity-60"
-          >
-            Random
-          </Link>
-        </nav>
-      </div>
-    </header>
+      </header>
+
+      {children}
+    </>
   );
 }
