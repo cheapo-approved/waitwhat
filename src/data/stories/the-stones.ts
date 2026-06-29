@@ -3,13 +3,14 @@ const story = {
   title: "The Stones",
   dek: "On a remote Pacific island, giant stone wheels sat in plain sight. No one moved them. No one guarded them. Yet everyone knew exactly who they belonged to.",
   summary: "A Pacific island used giant stone wheels as currency. One sank to the bottom of the ocean and still kept its value.",
-  readingTime: "4 min read",
+  readTime: "4 min read",
   featured: true,
   category: "History",
   hero: {
-    src: "/images/the-stones/hero.png",
-    alt: "Giant rai stone wheels on the island of Yap",
-  },
+  src: "/images/the-stones/hero.png",
+  alt: "Giant rai stone wheels on the island of Yap",
+  caption: "Rai stones on the island of Yap. Many never moved after they were carved.",
+},
   images: [
   {
     src: "/images/the-stones/1.jpg",
