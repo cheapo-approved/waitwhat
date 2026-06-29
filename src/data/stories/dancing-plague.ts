@@ -18,21 +18,21 @@ export const dancingPlague: Story = {
   images: [
     {
       src: "/images/dancing-plague/1.jpg",
-      after: 17,
+      after: 20,
       alt: "A medieval illustration depicting people dancing in the streets",
       caption:
         "What began with one person quickly became something much stranger.",
     },
     {
       src: "/images/dancing-plague/2.jpg",
-      after: 43,
+      after: 49,
       alt: "A historical illustration of musicians performing for dancers in medieval Europe",
       caption:
         "The city's solution only made the mystery even harder to explain.",
     },
     {
       src: "/images/dancing-plague/3.jpg",
-      after: 69,
+      after: 79,
       alt: "An empty cobblestone street in an old European town at dusk",
       caption:
         "Five hundred years later, we're still asking the same question.",
@@ -56,7 +56,11 @@ export const dancingPlague: Story = {
     "Just...",
     "dancing.",
     "People stopped to watch.",
-    "Then someone joined her.",
+    "Which is exactly what you'd expect.",
+    "...",
+    "Then someone stepped into the street.",
+    "...",
+    "and started dancing too.",
     "Okay...",
     "Weird.",
     "Then another.",
@@ -106,11 +110,15 @@ export const dancingPlague: Story = {
     "Okay...",
     "Now I'm convinced somebody had to be responsible.",
     "Poisoned grain?",
+    "Maybe.",
     "Religious ecstasy?",
+    "Could be.",
     "Mass hysteria?",
+    "That's probably the leading theory.",
+    "...",
     "I've gone down every rabbit hole I could find.",
     "Every theory explains part of the story.",
-    "None explain all of it.",
+    "None of them explain all of it.",
     "Then I caught myself.",
     "I've been asking the same question everyone else has been asking for five hundred years.",
     "**Why did they dance?**",
@@ -124,6 +132,6 @@ export const dancingPlague: Story = {
     "was just the part people noticed.",
     "...",
     "I don't know, man.",
-    "I'm just not convinced they were the last ones.",
+    "I'm just not convinced they were the last ones dancing.",
   ],
 };
