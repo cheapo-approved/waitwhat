@@ -5,7 +5,7 @@ export const rcaVideoDisc: Story = {
   title: "One of the Biggest Bets on Record",
   category: "Forgotten Futures",
   readTime: "4 min read",
-  featured: true,
+  featured: false,
   summary:
     "History almost chose another path",
 
