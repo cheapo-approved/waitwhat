@@ -13,39 +13,47 @@ export default function StoryCard({
   return (
     <Link
       href={`/story/${story.slug}`}
-      className={`group relative block overflow-hidden rounded-3xl border border-gray-300 bg-black transition hover:-translate-y-1 hover:shadow-2xl ${
-        featured ? "h-[360px]" : "h-[260px]"
+      className={`group relative block overflow-hidden rounded-3xl border border-gray-300 bg-black transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl ${
+        featured ? "h-[380px]" : "h-[260px]"
       }`}
     >
       {heroImage && (
         <div
-          className="absolute inset-0 bg-cover bg-center opacity-80 transition-transform duration-500 group-hover:scale-105"
+          className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
           style={{ backgroundImage: `url(${heroImage})` }}
         />
       )}
 
-      <div className="absolute inset-0 bg-gradient-to-r from-white/96 via-white/70 to-transparent" />
+      {/* Strong editorial fade */}
+      <div className="absolute inset-0 bg-gradient-to-r from-white via-white/96 via-white/75 via-[45%] to transparent" />
 
-      <div className="relative flex h-full max-w-3xl flex-col justify-end p-8 sm:p-10">
-        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-gray-600">
-          {story.category}
-        </p>
+      {/* subtle dark overlay to make image richer */}
+      <div className="absolute inset-0 bg-black/10" />
 
-        <h2
-          className={
-            featured
-              ? "mt-5 max-w-2xl text-3xl font-black leading-[1.05] tracking-tight"
-              : "mt-4 max-w-2xl text-2xl font-black leading-tight tracking-tight"
-          }
-        >
-          {story.title}
-        </h2>
+      <div className="relative flex h-full items-end p-8 sm:p-10">
+        <div className="max-w-lg">
+          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-gray-600">
+            {story.category}
+          </p>
 
-        <p className="mt-5 max-w-xl text-lg leading-relaxed text-gray-700">
-          {story.summary}
-        </p>
+          <h2
+            className={
+              featured
+                ? "mt-5 text-5xl font-black leading-none tracking-tight"
+                : "mt-4 text-2xl font-black leading-tight tracking-tight"
+            }
+          >
+            {story.title}
+          </h2>
 
-        <p className="mt-7 text-sm text-gray-500">{story.readTime}</p>
+          <p className="mt-5 text-lg leading-relaxed text-gray-700">
+            {story.summary}
+          </p>
+
+          <p className="mt-7 text-sm text-gray-500">
+            {story.readTime}
+          </p>
+        </div>
       </div>
     </Link>
   );

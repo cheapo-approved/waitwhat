@@ -2,7 +2,7 @@ const story = {
   slug: "the-stones",
   title: "The Stones",
   dek: "On a remote Pacific island, giant stone wheels sat in plain sight. No one moved them. No one guarded them. Yet everyone knew exactly who they belonged to.",
-  summary: "Giant stone wheels sat across a Pacific island. No one moved them. No one guarded them. Yet everyone knew exactly which ones mattered.",
+  summary: "Nobody could explain why giant stone wheels covered a tiny Pacific island.",
   readTime: "4 min read",
   featured: true,
   category: "History",
