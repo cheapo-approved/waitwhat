@@ -69,6 +69,7 @@ function isImpactLine(paragraph: string) {
   const cleaned = cleanParagraph(paragraph);
 
   return (
+    cleaned === "Wait...What?!" ||
     cleaned === "Wait...What?" ||
     cleaned === "Wait..." ||
     cleaned === "What?" ||
@@ -101,7 +102,7 @@ export default async function StoryPage({
       <main>
         <article>
           {story.hero && (
-            <section className="mx-auto max-w-6xl px-5 pt-10 sm:px-8 sm:pt-14">
+            <section className="mx-auto max-w-6xl px-5 pt-8 sm:px-8 sm:pt-14">
               <div className="relative overflow-hidden rounded-3xl bg-black shadow-sm">
                 <img
                   src={story.hero.src}
@@ -109,19 +110,19 @@ export default async function StoryPage({
                   className="aspect-[16/9] w-full object-cover"
                 />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/15 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent" />
 
-                <div className="absolute inset-0 flex items-end p-7 sm:p-12">
-                  <div className="max-w-2xl text-white drop-shadow-sm">
-                    <p className="text-xs font-bold uppercase tracking-[0.28em] text-white/80">
+                <div className="absolute inset-0 flex items-end p-5 pb-6 sm:p-12">
+                  <div className="max-w-3xl text-white drop-shadow-sm">
+                    <p className="text-[0.62rem] font-bold uppercase tracking-[0.24em] text-white/80 sm:text-xs sm:tracking-[0.28em]">
                       {story.category} • {story.readTime}
                     </p>
 
-                    <h1 className="mt-4 text-5xl font-black leading-none tracking-tight sm:text-7xl">
+                    <h1 className="mt-3 text-4xl font-black leading-[0.95] tracking-tight sm:mt-4 sm:text-7xl sm:leading-none">
                       {story.title}
                     </h1>
 
-                    <p className="mt-5 max-w-xl text-xl font-medium leading-8 text-white/90 sm:text-2xl sm:leading-9">
+                    <p className="mt-4 max-w-xl text-base font-medium leading-6 text-white/90 sm:mt-5 sm:text-2xl sm:leading-9">
                       {story.summary}
                     </p>
                   </div>
