@@ -23,7 +23,7 @@ export default function PageShell({
             </Link>
 
             <p className="mt-1 text-[13px] font-semibold uppercase tracking-[0.3em] text-gray-500">
-              Recover Wonder.
+              Rediscover Wonder.
             </p>
           </div>
         </div>

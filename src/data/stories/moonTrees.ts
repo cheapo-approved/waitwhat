@@ -9,7 +9,7 @@ export const moonTrees: Story = {
 
   readTime: "4 min read",
 
-  featured: true,
+  featured: false,
 
   summary:
     "NASA sent tree seeds around the Moon in 1971. Many of those trees are still alive today.",
