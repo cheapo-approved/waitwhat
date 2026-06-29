@@ -3,7 +3,7 @@ import type { Story } from "@/types/story";
 export const romanConcrete: Story = {
   slug: "roman-concrete",
   title: "Everyone Thought It Was a Mistake",
-  category: "Ancient & History",
+  category: "Lost Knowledge",
   readTime: "4 min read",
   featured: false,
   summary: "What if one of history's greatest engineering secrets never disappeared?",

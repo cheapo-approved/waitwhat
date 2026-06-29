@@ -3,7 +3,7 @@ import type { Story } from "@/types/story";
 export const dancingPlague: Story = {
   slug: "dancing-plague",
   title: "The Dancing Plague",
-  category: "Ancient & History",
+  category: "Human Weirdness",
   readTime: "4 min read",
   featured: true,
   summary:

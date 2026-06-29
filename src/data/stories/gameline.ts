@@ -3,7 +3,7 @@ import type { Story } from "@/types/story";
 export const gameline: Story = {
   slug: "gameline",
   title: "Your Atari Almost Downloaded Games",
-  category: "Technology & Media",
+  category: "Forgotten Futures",
   readTime: "3 min read",
   featured: false,
   summary: "An old Atari cartridge was hiding a rough draft of the internet.",
