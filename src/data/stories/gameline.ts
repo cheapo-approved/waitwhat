@@ -85,7 +85,7 @@ export const gameline: Story = {
     "A few years later, he helped build a little online service called...",
     "AOL.",
     "Wait...",
-    "What?",
+    "What?!",
     "Maybe GameLine wasn't a failure.",
     "Maybe it was simply a glimpse of the future that arrived before the world was ready for it.",
     "Maybe great ideas don't always fail.",

@@ -5,7 +5,7 @@ export const romanConcrete: Story = {
   title: "Everyone Thought It Was a Mistake",
   category: "Ancient & History",
   readTime: "4 min read",
-  featured: true,
+  featured: false,
   summary: "What if one of history's greatest engineering secrets never disappeared?",
 
   hero: {
@@ -67,7 +67,7 @@ export const romanConcrete: Story = {
     "Except...",
     "It wasn't.",
     "Wait...",
-    "What?",
+    "What?!",
     "Those little white chunks weren't the mistake.",
     "They were the plan.",
     "The Romans intentionally left small pockets of lime inside the concrete.",
