@@ -2,6 +2,8 @@ const story = {
   slug: "the-stones",
   title: "The Stones",
   dek: "On a remote Pacific island, giant stone wheels sat in plain sight. No one moved them. No one guarded them. Yet everyone knew exactly who they belonged to.",
+  summary: "A Pacific island used giant stone wheels as currency. One sank to the bottom of the ocean and still kept its value.",
+  readingTime: "4 min read",
   featured: true,
   category: "History",
   hero: {
