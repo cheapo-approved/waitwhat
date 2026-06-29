@@ -2,10 +2,10 @@ import type { Story } from "@/types/story";
 
 export const antikythera: Story = {
   slug: "antikythera-mechanism",
-  title: "They Thought It Was Scrap Metal.",
+  title: "They Thought It Was Scrap Metal",
   category: "Ancient & History",
   readTime: "4 min read",
-  featured: true,
+  featured: false,
   summary: "Everyone was looking at the treasure. Nobody noticed the junk.",
 
   hero: {
