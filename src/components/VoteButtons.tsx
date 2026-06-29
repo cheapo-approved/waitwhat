@@ -1,4 +1,17 @@
+"use client";
+
+import { useOptimistic, useTransition } from "react";
 import { submitVote } from "@/app/actions/vote";
+
+type Vote = "WAIT" | "WHAT";
+
+const whatFragments = [
+  "/images/vote/what-fragment-1.png",
+  "/images/vote/what-fragment-2.png",
+  "/images/vote/what-fragment-3.png",
+  "/images/vote/what-fragment-4.png",
+  "/images/vote/what-fragment-5.png",
+];
 
 export default function VoteButtons({
   storySlug,
@@ -7,98 +20,134 @@ export default function VoteButtons({
 }: {
   storySlug: string;
   counts: { WAIT: number; WHAT: number };
-  userVote?: "WAIT" | "WHAT";
+  userVote?: Vote;
 }) {
-  const total = counts.WAIT + counts.WHAT;
-  const hasVoted = !!userVote || total > 0;
+  const [pending, startTransition] = useTransition();
 
-  const waitPercent =
-    total === 0 ? 0 : Math.round((counts.WAIT / total) * 100);
+  const [optimistic, addVote] = useOptimistic(
+    { counts, userVote },
+    (state, vote: Vote) => {
+      const next = { counts: { ...state.counts }, userVote: vote };
+      if (state.userVote) next.counts[state.userVote]--;
+      next.counts[vote]++;
+      return next;
+    }
+  );
 
-  const whatPercent =
-    total === 0 ? 0 : Math.round((counts.WHAT / total) * 100);
+  function vote(v: Vote) {
+    if (pending) return;
+
+    startTransition(async () => {
+      addVote(v);
+      await submitVote(storySlug, v);
+    });
+  }
+
+  const total = optimistic.counts.WAIT + optimistic.counts.WHAT;
+
+  function percent(v: Vote) {
+    if (total === 0) return 0;
+    return Math.round((optimistic.counts[v] / total) * 100);
+  }
+
+  function SymbolMeter({
+    type,
+    percentValue,
+  }: {
+    type: Vote;
+    percentValue: number;
+  }) {
+    const totalSymbols = 14;
+    const filledSymbols = Math.max(
+      1,
+      Math.round((percentValue / 100) * totalSymbols)
+    );
+
+    return (
+      <div className="flex flex-wrap items-center gap-1.5">
+        {Array.from({ length: totalSymbols }).map((_, index) => {
+          const filled = index < filledSymbols;
+          const src =
+            type === "WAIT"
+              ? "/images/vote/wait-pawn.png"
+              : whatFragments[index % whatFragments.length];
+
+          return (
+            <img
+              key={index}
+              src={src}
+              alt=""
+              className={`h-4 w-4 object-contain transition-all duration-500 ${
+                filled ? "opacity-90" : "opacity-15"
+              }`}
+            />
+          );
+        })}
+      </div>
+    );
+  }
+
+  function VoteChoice({
+    voteType,
+    logoSrc,
+    logoAlt,
+    description,
+  }: {
+    voteType: Vote;
+    logoSrc: string;
+    logoAlt: string;
+    description: string;
+  }) {
+    const selected = optimistic.userVote === voteType;
+    const otherSelected = optimistic.userVote && !selected;
+    const percentValue = percent(voteType);
+
+    return (
+      <button
+        onClick={() => vote(voteType)}
+        disabled={pending}
+        className={`w-full rounded-3xl border px-5 py-4 text-left transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg disabled:cursor-not-allowed ${
+          selected
+            ? "border-black bg-white shadow-lg ring-2 ring-black"
+            : "border-stone-200 bg-white"
+        } ${otherSelected ? "opacity-60" : ""}`}
+      >
+        <img
+          src={logoSrc}
+          alt={logoAlt}
+          className="h-[4.6rem] w-auto max-w-full object-contain object-left sm:h-[5.6rem]"
+        />
+
+        <div className="mt-4 flex items-center gap-4">
+          <p className="min-w-12 text-xl font-black text-gray-900">
+            {percentValue}%
+          </p>
+
+          <SymbolMeter type={voteType} percentValue={percentValue} />
+        </div>
+
+        <p className="mt-2 text-sm text-gray-500">{description}</p>
+      </button>
+    );
+  }
 
   return (
-    <div className="mt-10">
-      <div className="grid grid-cols-2 gap-4">
-        <form action={submitVote.bind(null, storySlug, "WAIT")}>
-          <button
-            disabled={hasVoted}
-            className="w-full cursor-pointer rounded-xl border px-4 py-5 text-center transition hover:-translate-y-0.5 hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:translate-y-0 disabled:hover:shadow-none"
-          >
-            <span className="block text-3xl">🤔</span>
-            <span className="mt-2 block font-black">WAIT...</span>
-            <span className="mt-1 block text-sm text-gray-500">
-              I was thinking.
-            </span>
-          </button>
-        </form>
+    <div className="mt-4 rounded-3xl border border-stone-200 bg-stone-50/40 p-4 shadow-sm sm:p-5">
+      <div className="space-y-3">
+        <VoteChoice
+          voteType="WAIT"
+          logoSrc="/images/vote/wait.png"
+          logoAlt="WAIT..."
+          description="I saw that coming."
+        />
 
-        <form action={submitVote.bind(null, storySlug, "WHAT")}>
-          <button
-            disabled={hasVoted}
-            className="w-full cursor-pointer rounded-xl bg-black px-4 py-5 text-center text-white transition hover:-translate-y-0.5 hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:translate-y-0 disabled:hover:shadow-none"
-          >
-            <span className="block text-3xl">🤯</span>
-            <span className="mt-2 block font-black">WHAT?!</span>
-            <span className="mt-1 block text-sm text-gray-300">
-              My mind was blown.
-            </span>
-          </button>
-        </form>
+        <VoteChoice
+          voteType="WHAT"
+          logoSrc="/images/vote/what.png"
+          logoAlt="WHAT?!"
+          description="No... not in my timeline."
+        />
       </div>
-
-      {!hasVoted && (
-        <p className="mt-4 text-center text-sm text-gray-500">
-          Vote to see where everyone else landed.
-        </p>
-      )}
-
-      {hasVoted && (
-        <div className="mt-8 space-y-5">
-          <h3 className="text-center text-sm font-black uppercase tracking-widest text-gray-500">
-            The Community
-          </h3>
-
-          <div>
-            <div className="mb-2 flex items-center justify-between text-sm font-semibold">
-              <span>🤔 WAIT...</span>
-              <span>{waitPercent}%</span>
-            </div>
-
-            <div className="h-3 overflow-hidden rounded-full bg-gray-200">
-              <div
-                className="h-full rounded-full bg-gray-900 transition-all duration-500"
-                style={{ width: `${waitPercent}%` }}
-              />
-            </div>
-          </div>
-
-          <div>
-            <div className="mb-2 flex items-center justify-between text-sm font-semibold">
-              <span>🤯 WHAT?!</span>
-              <span>{whatPercent}%</span>
-            </div>
-
-            <div className="h-3 overflow-hidden rounded-full bg-gray-200">
-              <div
-                className="h-full rounded-full bg-gray-500 transition-all duration-500"
-                style={{ width: `${whatPercent}%` }}
-              />
-            </div>
-          </div>
-
-          <p className="pt-2 text-center text-sm text-gray-500">
-            {total.toLocaleString()}{" "}
-            {total === 1 ? "curious person voted." : "curious people voted."}
-          </p>
-
-          <p className="text-center text-sm text-gray-500">
-            ✓ You voted{" "}
-            <strong>{userVote === "WAIT" ? "🤔 WAIT..." : "🤯 WHAT?!"}</strong>
-          </p>
-        </div>
-      )}
     </div>
   );
 }

@@ -5,27 +5,74 @@ import { getVoteCounts } from "@/lib/votes";
 import { notFound } from "next/navigation";
 import type { StoryImage as StoryImageType } from "@/types/story";
 
+const imageKindLabels: Record<string, string> = {
+  curator: "Curator's Note",
+  archive: "From the Archive",
+  field: "Field Photograph",
+  reconstruction: "Artist's Reconstruction",
+  artifact: "Museum Collection",
+};
+
+const imageKindStyles: Record<string, string> = {
+  curator: "text-stone-500",
+  archive: "text-amber-700",
+  field: "text-emerald-700",
+  reconstruction: "text-sky-700",
+  artifact: "text-violet-700",
+};
+
 function StoryImageBlock({
   image,
-  hero = false,
 }: {
-  image: StoryImageType;
-  hero?: boolean;
+  image: StoryImageType & { kind?: string };
 }) {
+  const imageKind = image.kind;
+  const label = imageKind ? imageKindLabels[imageKind] : undefined;
+  const labelStyle = imageKind
+    ? imageKindStyles[imageKind] ?? "text-stone-500"
+    : "text-stone-500";
+
   return (
-    <figure className={hero ? "my-0" : "my-20"}>
-      <div className="overflow-hidden rounded-3xl bg-gray-100">
-        <img
-          src={image.src}
-          alt={image.alt}
-          className={hero ? "aspect-video w-full object-cover" : "h-auto w-full"}
-        />
+    <figure className="my-6 overflow-hidden rounded-3xl border border-stone-200 bg-stone-50 shadow-sm sm:my-8">
+      <div className="overflow-hidden bg-stone-100">
+        <img src={image.src} alt={image.alt} className="h-auto w-full" />
       </div>
 
-      <figcaption className="mx-auto mt-4 max-w-2xl text-center text-sm italic leading-6 text-gray-500">
-        {image.caption}
+      <figcaption className="border-t border-stone-200 px-5 py-3 sm:px-6 sm:py-4">
+        {label && (
+          <p
+            className={`text-[0.68rem] font-bold uppercase tracking-[0.22em] ${labelStyle}`}
+          >
+            {label}
+          </p>
+        )}
+
+        <p
+          className={
+            label
+              ? "mt-2 text-sm leading-6 text-stone-600"
+              : "text-sm leading-6 text-stone-600"
+          }
+        >
+          {image.caption}
+        </p>
       </figcaption>
     </figure>
+  );
+}
+
+function cleanParagraph(paragraph: string) {
+  return paragraph.replace(/\*\*/g, "");
+}
+
+function isImpactLine(paragraph: string) {
+  const cleaned = cleanParagraph(paragraph);
+
+  return (
+    cleaned === "Wait...What?" ||
+    cleaned === "Wait..." ||
+    cleaned === "What?" ||
+    cleaned === "Thunk."
   );
 }
 
@@ -41,7 +88,7 @@ export default async function StoryPage({
 
   const counts = await getVoteCounts(story.slug);
 
-  const imagesByIndex = new Map<number, StoryImageType>();
+  const imagesByIndex = new Map<number, StoryImageType & { kind?: string }>();
 
   for (const image of story.images ?? []) {
     if (typeof image.after === "number") {
@@ -55,41 +102,51 @@ export default async function StoryPage({
         <article>
           {story.hero && (
             <section className="mx-auto max-w-6xl px-5 pt-10 sm:px-8 sm:pt-14">
-              <StoryImageBlock image={story.hero} hero />
+              <div className="relative overflow-hidden rounded-3xl bg-black shadow-sm">
+                <img
+                  src={story.hero.src}
+                  alt={story.hero.alt}
+                  className="aspect-[16/9] w-full object-cover"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/15 to-transparent" />
+
+                <div className="absolute inset-0 flex items-end p-7 sm:p-12">
+                  <div className="max-w-2xl text-white drop-shadow-sm">
+                    <p className="text-xs font-bold uppercase tracking-[0.28em] text-white/80">
+                      {story.category} • {story.readTime}
+                    </p>
+
+                    <h1 className="mt-4 text-5xl font-black leading-none tracking-tight sm:text-7xl">
+                      {story.title}
+                    </h1>
+
+                    <p className="mt-5 max-w-xl text-xl font-medium leading-8 text-white/90 sm:text-2xl sm:leading-9">
+                      {story.summary}
+                    </p>
+                  </div>
+                </div>
+              </div>
             </section>
           )}
 
-          <header className="mx-auto max-w-3xl px-5 pb-10 pt-14 text-center sm:px-8">
-            <p className="text-sm uppercase tracking-widest text-gray-500">
-              {story.category} • {story.readTime}
-            </p>
-
-            <h1 className="mt-6 text-5xl font-black leading-none tracking-tight sm:text-7xl">
-              {story.title}
-            </h1>
-
-            <p className="mx-auto mt-8 max-w-2xl text-xl leading-8 text-gray-600 sm:text-2xl sm:leading-9">
-              {story.summary}
-            </p>
-          </header>
-
-          <section className="mx-auto max-w-2xl px-5 pb-16 pt-4 sm:px-8">
-            <div className="space-y-8 text-xl leading-9">
+          <section className="mx-auto max-w-2xl px-5 pb-16 pt-10 sm:px-8 sm:pt-12">
+            <div className="space-y-3 text-lg leading-7 text-gray-900 sm:text-[1.08rem] sm:leading-8">
               {story.body.map((paragraph, index) => {
                 const imageAfterParagraph = imagesByIndex.get(index);
+                const cleanedParagraph = cleanParagraph(paragraph);
+                const impact = isImpactLine(paragraph);
 
                 return (
                   <div key={index}>
                     <p
                       className={
-                        paragraph === "Wait..." ||
-                        paragraph === "What?" ||
-                        paragraph === "Thunk."
-                          ? "text-3xl font-black"
+                        impact
+                          ? "pt-3 text-3xl font-black leading-tight tracking-tight sm:text-4xl"
                           : ""
                       }
                     >
-                      {paragraph}
+                      {cleanedParagraph}
                     </p>
 
                     {imageAfterParagraph && (
@@ -100,10 +157,10 @@ export default async function StoryPage({
               })}
             </div>
 
-            <hr className="my-20" />
+            <hr className="my-14 border-stone-200" />
 
             <section>
-              <h2 className="text-4xl font-black">Where Was I?</h2>
+              <h2 className="text-4xl font-black">Cast your vote!</h2>
 
               <VoteButtons
                 storySlug={story.slug}
