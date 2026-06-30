@@ -5,7 +5,7 @@ export const acousticKitty: Story = {
   title: "Wanted: Independent Contractor",
   category: "Spies & Secrets",
   readTime: "5 min read",
-  featured: true,
+  featured: false,
   summary:
     "Cold War fears led to a solution that sounded too ridiculous to be true.",
 

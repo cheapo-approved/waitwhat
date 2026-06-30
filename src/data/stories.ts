@@ -6,9 +6,10 @@ import { antikythera } from "@/data/stories/antikythera";
 import { rcaVideoDisc } from "@/data/stories/rca-video-disc";
 import { dancingPlague } from "@/data/stories/dancing-plague";
 import { acousticKitty } from "@/data/stories/acoustic-kitty";
-
+import { explodingWhale } from "@/data/stories/exploding-whale";
 
 export const stories: Story[] = [
+  explodingWhale,
   acousticKitty,
   dancingPlague,
   rcaVideoDisc,
