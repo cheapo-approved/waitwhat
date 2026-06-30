@@ -3,6 +3,7 @@ import VoteButtons from "@/components/VoteButtons";
 import { getStory } from "@/lib/getStory";
 import { getVoteCounts } from "@/lib/votes";
 import { notFound } from "next/navigation";
+import ShareButtons from "@/components/ShareButtons";
 import type { StoryImage as StoryImageType } from "@/types/story";
 
 const imageKindLabels: Record<string, string> = {
@@ -157,7 +158,7 @@ export default async function StoryPage({
                 );
               })}
             </div>
-
+            <ShareButtons title={story.title} slug={story.slug} />
             <hr className="my-14 border-stone-200" />
 
             <section>
