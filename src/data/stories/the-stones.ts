@@ -115,7 +115,6 @@ body: [
   "Then we realize...",
   "the stone was never the important part.",
   "The trust was.",
-  "**Wait...What?!**",
 ],
 };
 

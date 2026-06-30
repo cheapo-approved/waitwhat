@@ -81,7 +81,7 @@ export const acousticKitty: Story = {
     "...",
     "Obviously,",
     "...",
-    "a cat.",
+    "it was a cat.",
     "Wait...what?",
     "I laughed too.",
     "Then I found the declassified documents.",

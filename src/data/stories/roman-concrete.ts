@@ -2,11 +2,11 @@ import type { Story } from "@/types/story";
 
 export const romanConcrete: Story = {
   slug: "roman-concrete",
-  title: "Everyone Thought It Was a Mistake",
+  title: "Surely It Was a Mistake",
   category: "Lost Knowledge",
   readTime: "4 min read",
   featured: false,
-  summary: "What if one of history's greatest engineering secrets never disappeared?",
+  summary: "The secret that stood the test of time",
 
   hero: {
     src: "/images/roman-concrete/hero.png",
