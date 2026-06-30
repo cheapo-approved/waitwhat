@@ -16,42 +16,46 @@ export default function ShareButtons({
       ? `${window.location.origin}/story/${slug}`
       : `https://waitwhat.media/story/${slug}`;
 
-  async function share() {
-    if (navigator.share) {
-      await navigator.share({
-        title,
-        text: `Wait...what?! ${title}`,
-        url,
-      });
-      return;
-    }
-
-    await navigator.clipboard.writeText(url);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 1500);
-  }
-
   async function copyLink() {
     await navigator.clipboard.writeText(url);
     setCopied(true);
     setTimeout(() => setCopied(false), 1500);
   }
 
-  return (
-    <div className="mt-8 flex flex-wrap gap-3 border-t border-stone-200 pt-6">
-      <button
-        onClick={share}
-        className="rounded-full border border-stone-300 px-5 py-2 text-sm font-bold uppercase tracking-[0.15em] text-gray-800 transition hover:bg-black hover:text-white"
-      >
-        Share
-      </button>
+  async function share() {
+    if (navigator.share) {
+      await navigator.share({
+        title,
+        text: `Wait...What?! ${title}`,
+        url,
+      });
+      return;
+    }
 
-      <button
-        onClick={copyLink}
-        className="rounded-full border border-stone-300 px-5 py-2 text-sm font-bold uppercase tracking-[0.15em] text-gray-800 transition hover:bg-black hover:text-white"
-      >
-        {copied ? "Copied!" : "Copy Link"}
-      </button>
-    </div>
+    await copyLink();
+  }
+
+  return (
+    <section className="mt-8 border-t border-stone-200 pt-6 text-center">
+      <p className="text-xs font-black uppercase tracking-[0.28em] text-stone-500">
+        Share this story
+      </p>
+
+      <div className="mt-4 flex justify-center gap-3">
+        <button
+          onClick={share}
+          className="rounded-full border border-stone-300 bg-white px-5 py-2 text-sm font-bold uppercase tracking-[0.14em] text-gray-800 transition hover:bg-black hover:text-white"
+        >
+          Share
+        </button>
+
+        <button
+          onClick={copyLink}
+          className="rounded-full border border-stone-300 bg-white px-5 py-2 text-sm font-bold uppercase tracking-[0.14em] text-gray-800 transition hover:bg-black hover:text-white"
+        >
+          {copied ? "Copied!" : "Copy"}
+        </button>
+      </div>
+    </section>
   );
 }

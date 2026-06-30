@@ -1,9 +1,9 @@
 import PageShell from "@/components/PageShell";
 import VoteButtons from "@/components/VoteButtons";
+import ShareButtons from "@/components/ShareButtons";
 import { getStory } from "@/lib/getStory";
 import { getVoteCounts } from "@/lib/votes";
 import { notFound } from "next/navigation";
-import ShareButtons from "@/components/ShareButtons";
 import type { StoryImage as StoryImageType } from "@/types/story";
 
 const imageKindLabels: Record<string, string> = {
@@ -103,7 +103,7 @@ export default async function StoryPage({
       <main>
         <article>
           {story.hero && (
-            <section className="mx-auto max-w-6xl px-5 pt-8 sm:px-8 sm:pt-14">
+            <section className="mx-auto max-w-6xl px-5 pt-4 sm:px-8 sm:pt-8">
               <div className="relative overflow-hidden rounded-3xl bg-black shadow-sm">
                 <img
                   src={story.hero.src}
@@ -158,11 +158,11 @@ export default async function StoryPage({
                 );
               })}
             </div>
-            <ShareButtons title={story.title} slug={story.slug} />
-            <hr className="my-14 border-stone-200" />
 
-            <section>
-              <h2 className="text-4xl font-black">Cast your vote!</h2>
+            <section className="mt-12">
+              <h2 className="text-2xl font-black tracking-tight">
+                What's your take?
+              </h2>
 
               <VoteButtons
                 storySlug={story.slug}
@@ -170,6 +170,8 @@ export default async function StoryPage({
                 userVote={undefined}
               />
             </section>
+
+            <ShareButtons title={story.title} slug={story.slug} />
           </section>
         </article>
       </main>

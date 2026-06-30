@@ -8,29 +8,34 @@ export default function PageShell({
 }) {
   return (
     <>
-      <header className="border-b border-gray-200">
-        <div className="mx-auto max-w-6xl px-5 pt-4 pb-2">
-          <div className="flex flex-col items-start">
-            <Link href="/" className="-ml-3 block">
+      <header className="border-b border-gray-200 bg-white">
+        <div className="mx-auto flex max-w-6xl items-end justify-between px-5 py-5 sm:px-8 sm:py-6">
+          <div>
+            <Link href="/" className="-ml-4 block sm:-ml-5">
               <Image
                 src="/brand/waitwhat-logo.png"
                 alt="WAIT...WHAT?!"
-                width={700}
-                height={170}
+                width={1000}
+                height={243}
                 priority
-                className="h-auto w-[230px] sm:w-[320px] md:w-[400px]"
+                className="h-auto w-[310px] sm:w-[470px] md:w-[590px]"
               />
             </Link>
 
-            <p className="mt-1 text-[13px] font-semibold uppercase tracking-[0.3em] text-gray-500">
+            <p className="mt-1 text-[0.72rem] font-black uppercase tracking-[0.34em] text-gray-500 sm:text-sm">
               Rediscover Wonder
             </p>
           </div>
-        </div>
 
-        <nav className="mx-auto flex max-w-6xl justify-end px-5 pb-3 text-sm font-semibold uppercase tracking-[0.18em] text-gray-700">
-          <Link href="/random">Random</Link>
-        </nav>
+          <nav className="pb-1">
+            <Link
+              href="/random"
+              className="text-xs font-black uppercase tracking-[0.22em] text-gray-600 transition hover:text-black sm:text-sm"
+            >
+              Random
+            </Link>
+          </nav>
+        </div>
       </header>
 
       {children}

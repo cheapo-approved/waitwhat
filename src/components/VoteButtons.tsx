@@ -57,7 +57,7 @@ export default function VoteButtons({
     type: Vote;
     percentValue: number;
   }) {
-    const totalSymbols = 14;
+    const totalSymbols = 12;
     const filledSymbols = Math.max(
       1,
       Math.round((percentValue / 100) * totalSymbols)
@@ -77,8 +77,8 @@ export default function VoteButtons({
               key={index}
               src={src}
               alt=""
-              className={`h-3.5 w-3.5 shrink-0 object-contain transition-all duration-500 sm:h-4 sm:w-4 ${
-                filled ? "opacity-90" : "opacity-15"
+              className={`h-2.5 w-2.5 shrink-0 object-contain transition-all duration-500 ${
+                filled ? "opacity-80" : "opacity-15"
               }`}
             />
           );
@@ -106,34 +106,58 @@ export default function VoteButtons({
       <button
         onClick={() => vote(voteType)}
         disabled={pending}
-        className={`w-full rounded-3xl border px-5 py-4 text-left transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg disabled:cursor-not-allowed ${
+        className={`group w-full rounded-xl border px-3.5 py-2 text-left transition-all duration-200 hover:-translate-y-0.5 hover:border-black hover:shadow-md disabled:cursor-not-allowed ${
           selected
-            ? "border-black bg-white shadow-lg ring-2 ring-black"
-            : "border-stone-200 bg-white"
+            ? "border-black bg-black text-white shadow-md"
+            : "border-stone-200 bg-white text-gray-900"
         } ${otherSelected ? "opacity-60" : ""}`}
       >
-        <img
-          src={logoSrc}
-          alt={logoAlt}
-          className="h-[4.6rem] w-auto max-w-full object-contain object-left sm:h-[5.6rem]"
-        />
+        <div className="flex items-center justify-between gap-4">
+          <img
+            src={logoSrc}
+            alt={logoAlt}
+            className={`h-[2.55rem] w-auto max-w-[170px] object-contain object-left sm:h-[3rem] ${
+              selected ? "invert" : ""
+            }`}
+          />
 
-        <div className="mt-4 flex items-center gap-3">
-          <p className="min-w-10 text-lg font-black text-gray-900 sm:min-w-12 sm:text-xl">
+          <span
+            className={`text-xl font-black leading-none transition ${
+              selected
+                ? "text-white"
+                : "text-stone-300 group-hover:text-black"
+            }`}
+          >
+            →
+          </span>
+        </div>
+
+        <div className="mt-2 flex items-center gap-2.5">
+          <p
+            className={`min-w-8 text-sm font-black ${
+              selected ? "text-white" : "text-gray-900"
+            }`}
+          >
             {percentValue}%
           </p>
 
           <SymbolMeter type={voteType} percentValue={percentValue} />
         </div>
 
-        <p className="mt-2 text-sm text-gray-500">{description}</p>
+        <p
+          className={`mt-1 text-xs ${
+            selected ? "text-white/75" : "text-gray-500"
+          }`}
+        >
+          {description}
+        </p>
       </button>
     );
   }
 
   return (
-    <div className="mt-4 rounded-3xl border border-stone-200 bg-stone-50/40 p-4 shadow-sm sm:p-5">
-      <div className="space-y-3">
+    <div className="mx-auto mt-3 max-w-xl rounded-2xl border border-stone-200 bg-stone-50/40 p-2.5 shadow-sm">
+      <div className="space-y-2">
         <VoteChoice
           voteType="WAIT"
           logoSrc="/images/vote/wait.png"
