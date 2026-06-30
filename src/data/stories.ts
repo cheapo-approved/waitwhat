@@ -5,8 +5,11 @@ import { gameline } from "@/data/stories/gameline";
 import { antikythera } from "@/data/stories/antikythera";
 import { rcaVideoDisc } from "@/data/stories/rca-video-disc";
 import { dancingPlague } from "@/data/stories/dancing-plague";
+import { acousticKitty } from "@/data/stories/acoustic-kitty";
+
 
 export const stories: Story[] = [
+  acousticKitty,
   dancingPlague,
   rcaVideoDisc,
   theStones,

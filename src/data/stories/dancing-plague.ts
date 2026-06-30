@@ -5,7 +5,7 @@ export const dancingPlague: Story = {
   title: "The Dancing Plague",
   category: "Human Weirdness",
   readTime: "4 min read",
-  featured: true,
+  featured: false,
   summary:
     "It started with one woman. Then an entire town couldn't seem to stop.",
 
