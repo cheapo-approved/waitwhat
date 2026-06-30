@@ -73,7 +73,7 @@ export const gameline: Story = {
     "The technology wasn't science fiction.",
     "It actually worked.",
     "So why haven't most people ever heard of it?",
-    "Then the worst possible thing happened.",
+    "Because the worst possible thing happened.",
     "In 1983, the video game industry collapsed.",
     "Stores were overloaded with bad games.",
     "Consumer confidence disappeared.",
