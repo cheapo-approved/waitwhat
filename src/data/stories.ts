@@ -7,8 +7,10 @@ import { rcaVideoDisc } from "@/data/stories/rca-video-disc";
 import { dancingPlague } from "@/data/stories/dancing-plague";
 import { acousticKitty } from "@/data/stories/acoustic-kitty";
 import { explodingWhale } from "@/data/stories/exploding-whale";
+import { emuWar } from "@/data/stories/emu-war";
 
 export const stories: Story[] = [
+  emuWar,
   explodingWhale,
   acousticKitty,
   dancingPlague,

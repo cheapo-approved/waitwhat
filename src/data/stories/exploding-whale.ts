@@ -5,7 +5,7 @@ export const explodingWhale: Story = {
   title: "How Do You Get Rid of a Body?",
   category: "Human Weirdness",
   readTime: "5 min read",
-  featured: true,
+  featured: false,
   summary:
     "What do you do when you're in charge of cleanup duty?",
 
