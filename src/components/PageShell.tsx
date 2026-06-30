@@ -28,8 +28,7 @@ export default function PageShell({
           </div>
         </div>
 
-        <nav className="mx-auto flex max-w-6xl justify-end gap-10 px-5 pb-3 text-sm font-semibold uppercase tracking-[0.18em] text-gray-700">
-          <Link href="/">Discoveries</Link>
+        <nav className="mx-auto flex max-w-6xl justify-end px-5 pb-3 text-sm font-semibold uppercase tracking-[0.18em] text-gray-700">
           <Link href="/random">Random</Link>
         </nav>
       </header>
