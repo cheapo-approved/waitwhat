@@ -64,7 +64,7 @@ export default function VoteButtons({
     );
 
     return (
-      <div className="flex flex-wrap items-center gap-1.5">
+      <div className="flex flex-1 items-center gap-1 overflow-hidden">
         {Array.from({ length: totalSymbols }).map((_, index) => {
           const filled = index < filledSymbols;
           const src =
@@ -77,7 +77,7 @@ export default function VoteButtons({
               key={index}
               src={src}
               alt=""
-              className={`h-4 w-4 object-contain transition-all duration-500 ${
+              className={`h-3.5 w-3.5 shrink-0 object-contain transition-all duration-500 sm:h-4 sm:w-4 ${
                 filled ? "opacity-90" : "opacity-15"
               }`}
             />
@@ -118,8 +118,8 @@ export default function VoteButtons({
           className="h-[4.6rem] w-auto max-w-full object-contain object-left sm:h-[5.6rem]"
         />
 
-        <div className="mt-4 flex items-center gap-4">
-          <p className="min-w-12 text-xl font-black text-gray-900">
+        <div className="mt-4 flex items-center gap-3">
+          <p className="min-w-10 text-lg font-black text-gray-900 sm:min-w-12 sm:text-xl">
             {percentValue}%
           </p>
 
