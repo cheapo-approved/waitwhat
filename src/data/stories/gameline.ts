@@ -2,11 +2,11 @@ import type { Story } from "@/types/story";
 
 export const gameline: Story = {
   slug: "gameline",
-  title: "Your Atari Almost Downloaded Games",
+  title: "Your Atari Could've Been Much More",
   category: "Forgotten Futures",
   readTime: "3 min read",
   featured: false,
-  summary: "An old Atari cartridge was hiding a rough draft of the internet.",
+  summary: "An old cartridge was hiding a rough draft of the future.",
 
   hero: {
     src: "/images/gameline/hero.png",
