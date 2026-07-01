@@ -4,7 +4,7 @@ export const dymaxion: Story = {
   slug: "dymaxion",
   title: "Chicago Came to See the Future",
   category: "Forgotten Futures",
-  readTime: "7 min read",
+  readTime: "5 min read",
   featured: true,
   summary:
     "Nobody expected it to show up looking like...that!",
