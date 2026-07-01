@@ -5,7 +5,7 @@ export const timothyDexter: Story = {
   title: "The Man Nobody Could Figure Out",
   category: "People",
   readTime: "5 min read",
-  featured: true,
+  featured: false,
   summary:
     "The more I learned about Timothy Dexter... the less certain I became.",
 

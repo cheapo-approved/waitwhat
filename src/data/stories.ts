@@ -9,8 +9,10 @@ import { acousticKitty } from "@/data/stories/acoustic-kitty";
 import { explodingWhale } from "@/data/stories/exploding-whale";
 import { emuWar } from "@/data/stories/emu-war";
 import { timothyDexter } from "@/data/stories/timothy-dexter";
+import { dymaxion } from "@/data/stories/dymaxion";
 
 export const stories: Story[] = [
+  dymaxion,
   timothyDexter,
   emuWar,
   explodingWhale,

@@ -46,13 +46,15 @@ export default function StoryCard({
             {story.title}
           </h2>
 
-          <p className="mt-5 inline-block rounded-lg bg-white/55 px-3 py-1 text-lg leading-relaxed text-gray-800">
-            {story.summary}
-          </p>
+          <p className="mt-5 max-w-md rounded-lg bg-white/55 px-3 py-2 text-lg leading-relaxed text-gray-800">
+  {story.summary}
+</p>
 
-          <p className="mt-4 inline-block rounded-md bg-white/45 px-2.5 py-1 text-sm text-gray-700">
-            {story.readTime}
-          </p>
+<div className="mt-3">
+  <span className="inline-block rounded-md bg-white/45 px-2.5 py-1 text-sm text-gray-700">
+    {story.readTime}
+  </span>
+</div>
         </div>
       </div>
     </Link>
