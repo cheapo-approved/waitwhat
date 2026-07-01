@@ -14,8 +14,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "WaitWhat",
-  description: "Recover wonder. One discovery at a time.",
+  title: {
+    default: "Wait...What?!",
+    template: "%s | Wait...What?!",
+  },
+  description:
+    "Rediscover wonder. One unbelievable story at a time.",
 };
 
 export default function RootLayout({

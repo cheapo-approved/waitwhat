@@ -24,10 +24,10 @@ export default function StoryCard({
         />
       )}
 
-      {/* Strong editorial fade */}
-      <div className="absolute inset-0 bg-gradient-to-r from-white via-white/96 via-white/75 via-[45%] to transparent" />
+      {/* Editorial fade */}
+      <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 via-white/55 to-transparent" />
 
-      {/* subtle dark overlay to make image richer */}
+      {/* Richen image slightly */}
       <div className="absolute inset-0 bg-black/10" />
 
       <div className="relative flex h-full items-end p-8 sm:p-10">
@@ -46,11 +46,11 @@ export default function StoryCard({
             {story.title}
           </h2>
 
-          <p className="mt-5 text-lg leading-relaxed text-gray-700">
+          <p className="mt-5 inline-block rounded-lg bg-white/55 px-3 py-1.5 text-lg leading-relaxed text-gray-800">
             {story.summary}
           </p>
 
-          <p className="mt-7 text-sm text-gray-500">
+          <p className="mt-4 inline-block rounded-md bg-white/45 px-2.5 py-1 text-sm text-gray-700">
             {story.readTime}
           </p>
         </div>
