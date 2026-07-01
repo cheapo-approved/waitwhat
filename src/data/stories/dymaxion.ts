@@ -3,7 +3,7 @@ import type { Story } from "@/types/story";
 export const dymaxion: Story = {
   slug: "dymaxion",
   title: "Chicago Came to See the Future",
-  category: "Transportation",
+  category: "Forgotten Futures",
   readTime: "7 min read",
   featured: true,
   summary:
