@@ -14,7 +14,7 @@ export default function StoryCard({
     <Link
       href={`/story/${story.slug}`}
       className={`group relative block overflow-hidden rounded-3xl border border-gray-300 bg-black transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl ${
-        featured ? "h-[380px]" : "h-[260px]"
+        featured ? "min-h-[420px]" : "min-h-[280px]"
       }`}
     >
       {heroImage && (
@@ -30,8 +30,8 @@ export default function StoryCard({
       {/* Richen image slightly */}
       <div className="absolute inset-0 bg-black/10" />
 
-      <div className="relative flex h-full items-end p-8 sm:p-10">
-        <div className="max-w-lg">
+      <div className="relative flex min-h-[inherit] items-end p-7 sm:p-10">
+        <div className="max-w-lg py-2">
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-gray-600">
             {story.category}
           </p>
@@ -39,14 +39,14 @@ export default function StoryCard({
           <h2
             className={
               featured
-                ? "mt-5 text-5xl font-black leading-none tracking-tight"
+                ? "mt-5 text-5xl font-black leading-[0.95] tracking-tight"
                 : "mt-4 text-2xl font-black leading-tight tracking-tight"
             }
           >
             {story.title}
           </h2>
 
-          <p className="mt-5 inline-block rounded-lg bg-white/55 px-3 py-1.5 text-lg leading-relaxed text-gray-800">
+          <p className="mt-5 inline-block rounded-lg bg-white/55 px-3 py-1 text-lg leading-relaxed text-gray-800">
             {story.summary}
           </p>
 
