@@ -5,7 +5,7 @@ export const emuWar: Story = {
   title: "How Do You Stop an Invasion?",
   category: "History",
   readTime: "6 min read",
-  featured: true,
+  featured: false,
   summary:
     "Some battles begin long before you know what you're fighting.",
 
