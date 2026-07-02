@@ -19,21 +19,21 @@ export const rcaVideoDisc: Story = {
   images: [
     {
       src: "/images/rca-video-disc/1.jpg",
-      after: 24,
+      after: 44,
       alt: "RCA SelectaVision King Kong CED movie disc in its plastic caddy",
       caption:
         "At first glance, it looked like something from the record bin.",
     },
     {
       src: "/images/rca-video-disc/2.jpg",
-      after: 52,
+      after: 63,
       alt: "RCA SelectaVision player connected to a television",
       caption:
         "The machine played movies using a stylus that physically traced grooves in the disc.",
     },
     {
       src: "/images/rca-video-disc/3.jpg",
-      after: 79,
+      after: 86,
       alt: "A shelf of RCA SelectaVision CED movie discs",
       caption:
         "For a brief moment, this was a real branch of the future.",
@@ -130,19 +130,18 @@ export const rcaVideoDisc: Story = {
     "It was the future.",
     "---",
     "History chose VHS.",
-    "The bet failed.",
+    "The bet just didn't pay off.",
     "A few years later, RCA stopped making the players.",
     "Not long after that, the company that had helped shape American broadcasting and consumer electronics was sold to General Electric.",
     "This one decision didn't bring RCA down by itself.",
     "But it became one of the biggest product failures in consumer electronics history.",
     "---",
-    "History has a funny way of making the winning path feel inevitable.",
-    "It wasn't.",
-    "For nearly two decades, one of America's greatest technology companies believed the future of home entertainment would arrive inside something that looked exactly like a record album.",
-    "They were wrong.",
-    "Not because the technology didn't work.",
-    "It did.",
-    "History just chose a different future.",
+    "I love stories like this.",
+    "Not because they changed history.",
+    "Because they make me question my timeline.",
+    "...",
+    "Were movies on records on your timeline?",
+    "Because they sure as hell weren't on mine.",
   ],
 };
 
