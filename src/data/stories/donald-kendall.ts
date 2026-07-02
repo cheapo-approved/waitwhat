@@ -7,7 +7,7 @@ export const donaldKendall: Story = {
   readTime: "7 min read",
   featured: true,
   summary:
-    "No, They Weren't Planning to Invade Coke.",
+    "No, they weren't planning to invade Coke.",
 
   hero: {
     src: "/images/donald-kendall/hero.png",

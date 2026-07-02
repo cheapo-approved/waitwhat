@@ -161,22 +161,22 @@ export default async function StoryPage({
                 <img
                   src={story.hero.src}
                   alt={story.hero.alt}
-                  className="aspect-[16/9] w-full object-cover"
+                  className="aspect-[16/10] w-full object-cover object-center sm:aspect-[16/9]"
                 />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent" />
 
-                <div className="absolute inset-0 flex items-end p-5 pb-6 sm:p-12">
-                  <div className="max-w-3xl text-white drop-shadow-sm">
-                    <p className="text-[0.62rem] font-bold uppercase tracking-[0.24em] text-white/80 sm:text-xs sm:tracking-[0.28em]">
+                <div className="absolute inset-0 flex items-end p-5 pb-5 sm:p-12">
+                  <div className="max-w-[92%] text-white drop-shadow-sm sm:max-w-3xl">
+                    <p className="text-[0.58rem] font-bold uppercase tracking-[0.22em] text-white/80 sm:text-xs sm:tracking-[0.28em]">
                       {story.category} • {story.readTime}
                     </p>
 
-                    <h1 className="mt-3 text-4xl font-black leading-[0.95] tracking-tight sm:mt-4 sm:text-7xl sm:leading-none">
+                    <h1 className="mt-2 text-[2.45rem] font-black leading-[0.9] tracking-tight sm:mt-4 sm:text-7xl sm:leading-none">
                       {story.title}
                     </h1>
 
-                    <p className="mt-4 max-w-xl text-base font-medium leading-6 text-white/90 sm:mt-5 sm:text-2xl sm:leading-9">
+                    <p className="mt-3 max-w-xl text-sm font-medium leading-5 text-white/90 sm:mt-5 sm:text-2xl sm:leading-9">
                       {story.summary}
                     </p>
                   </div>
