@@ -27,43 +27,39 @@ export default function MastheadMenu() {
     };
   }, []);
 
+  const links = [
+    { href: "/", label: "Home" },
+    { href: "/random", label: "Random" },
+    { href: "/about", label: "About" },
+    { href: "/contact", label: "Contact" },
+  ];
+
   return (
     <div ref={menuRef} className="relative pb-[1px]">
       <button
         type="button"
         onClick={() => setOpen((current) => !current)}
-        aria-label="Open menu"
+        aria-label={open ? "Close menu" : "Open menu"}
         aria-expanded={open}
         className="rounded-lg px-2 py-1 text-3xl font-black leading-none text-gray-700 transition hover:bg-gray-100 hover:text-black"
       >
-        ☰
+        {open ? "×" : "☰"}
       </button>
 
       {open && (
-        <nav className="absolute right-0 z-50 mt-3 w-48 rounded-2xl border border-gray-200 bg-white p-3 shadow-xl">
-          <Link
-            href="/random"
-            onClick={() => setOpen(false)}
-            className="block rounded-xl px-4 py-3 text-sm font-bold uppercase tracking-[0.16em] text-gray-700 hover:bg-gray-100 hover:text-black"
-          >
-            Random
-          </Link>
-
-          <Link
-            href="/about"
-            onClick={() => setOpen(false)}
-            className="block rounded-xl px-4 py-3 text-sm font-bold uppercase tracking-[0.16em] text-gray-700 hover:bg-gray-100 hover:text-black"
-          >
-            About
-          </Link>
-
-          <Link
-            href="/contact"
-            onClick={() => setOpen(false)}
-            className="block rounded-xl px-4 py-3 text-sm font-bold uppercase tracking-[0.16em] text-gray-700 hover:bg-gray-100 hover:text-black"
-          >
-            Contact
-          </Link>
+        <nav className="absolute right-0 z-50 mt-4 w-56 overflow-hidden rounded-3xl border border-stone-200 bg-white/95 backdrop-blur-sm shadow-xl">
+          <div className="divide-y divide-stone-200">
+            {links.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setOpen(false)}
+                className="block px-6 py-5 text-sm font-black uppercase tracking-[0.22em] text-stone-700 transition hover:bg-stone-50 hover:text-black"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
         </nav>
       )}
     </div>
