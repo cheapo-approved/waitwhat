@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import MastheadMenu from "@/components/MastheadMenu";
 
 export default function PageShell({
   children,
@@ -22,19 +23,12 @@ export default function PageShell({
               />
             </Link>
 
-            <p className="mt-1 text-[0.68rem] font-black uppercase tracking-[0.38em] text-gray-500 sm:text-sm">
+            <p className="mt-1 text-[0.68rem] font-black uppercase leading-none tracking-[0.38em] text-gray-500 sm:text-sm">
               Rediscover Wonder
             </p>
           </div>
 
-          <nav className="pb-1">
-            <Link
-              href="/random"
-              className="text-xs font-black uppercase tracking-[0.24em] text-gray-600 transition hover:text-black sm:text-sm"
-            >
-              Random
-            </Link>
-          </nav>
+          <MastheadMenu />
         </div>
       </header>
 
