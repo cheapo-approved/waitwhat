@@ -1,6 +1,6 @@
 import StoryCard from "@/components/StoryCard";
 import PageShell from "@/components/PageShell";
-import { getAllStories } from "@/lib/getStory";
+import { getStory, getAllStories } from "@/lib/getStory";
 
 export default function Home() {
   const stories = getAllStories();

@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import PageShell from "@/components/PageShell";
 import VoteButtons from "@/components/VoteButtons";
 import ShareButtons from "@/components/ShareButtons";
-import { getStory } from "@/lib/getStory";
+import { getAllStories, getStory } from "@/lib/getStory";
 import { getVoteCounts } from "@/lib/votes";
 import { notFound } from "next/navigation";
 import type { StoryImage as StoryImageType } from "@/types/story";
@@ -18,9 +19,7 @@ export async function generateMetadata({
   const story = getStory(slug);
 
   if (!story) {
-    return {
-      title: "Story Not Found",
-    };
+    return { title: "Story Not Found" };
   }
 
   const imageUrl = story.hero?.src
@@ -32,23 +31,14 @@ export async function generateMetadata({
   return {
     title: story.title,
     description: story.summary,
-    alternates: {
-      canonical: storyUrl,
-    },
+    alternates: { canonical: storyUrl },
     openGraph: {
       title: story.title,
       description: story.summary,
       url: storyUrl,
       siteName: "Wait...What?!",
       type: "article",
-      images: [
-        {
-          url: imageUrl,
-          width: 1200,
-          height: 675,
-          alt: story.hero?.alt ?? story.title,
-        },
-      ],
+      images: [{ url: imageUrl, width: 1200, height: 675, alt: story.hero?.alt ?? story.title }],
     },
     twitter: {
       card: "summary_large_image",
@@ -75,11 +65,7 @@ const imageKindStyles: Record<string, string> = {
   artifact: "text-violet-700",
 };
 
-function StoryImageBlock({
-  image,
-}: {
-  image: StoryImageType & { kind?: string };
-}) {
+function StoryImageBlock({ image }: { image: StoryImageType & { kind?: string } }) {
   const imageKind = image.kind;
   const label = imageKind ? imageKindLabels[imageKind] : undefined;
   const labelStyle = imageKind
@@ -94,20 +80,12 @@ function StoryImageBlock({
 
       <figcaption className="border-t border-stone-200 px-5 py-3 sm:px-6 sm:py-4">
         {label && (
-          <p
-            className={`text-[0.68rem] font-bold uppercase tracking-[0.22em] ${labelStyle}`}
-          >
+          <p className={`text-[0.68rem] font-bold uppercase tracking-[0.22em] ${labelStyle}`}>
             {label}
           </p>
         )}
 
-        <p
-          className={
-            label
-              ? "mt-2 text-sm leading-6 text-stone-600"
-              : "text-sm leading-6 text-stone-600"
-          }
-        >
+        <p className={label ? "mt-2 text-sm leading-6 text-stone-600" : "text-sm leading-6 text-stone-600"}>
           {image.caption}
         </p>
       </figcaption>
@@ -143,6 +121,9 @@ export default async function StoryPage({
 
   const counts = await getVoteCounts(story.slug);
 
+  const otherStories = getAllStories().filter((item) => item.slug !== story.slug);
+  const nextStory = otherStories[Math.floor(Math.random() * otherStories.length)];
+
   const imagesByIndex = new Map<number, StoryImageType & { kind?: string }>();
 
   for (const image of story.images ?? []) {
@@ -156,61 +137,58 @@ export default async function StoryPage({
       <main className="bg-white text-gray-900">
         <article>
           {story.hero && (
-  <section className="mx-auto max-w-6xl px-5 pt-4 sm:px-8 sm:pt-8">
-    {/* Mobile */}
-    <div className="block sm:hidden">
-      <div className="overflow-hidden rounded-3xl bg-black shadow-sm">
-        <img
-          src={story.hero.src}
-          alt={story.hero.alt}
-          className="aspect-[16/9] w-full object-cover"
-        />
-      </div>
+            <section className="mx-auto max-w-6xl px-5 pt-4 sm:px-8 sm:pt-8">
+              <div className="block sm:hidden">
+                <div className="overflow-hidden rounded-3xl bg-black shadow-sm">
+                  <img
+                    src={story.hero.src}
+                    alt={story.hero.alt}
+                    className="aspect-[16/9] w-full object-cover"
+                  />
+                </div>
 
-      <div className="mt-5">
-        <p className="text-[0.68rem] font-bold uppercase tracking-[0.24em] text-stone-500">
-          {story.category} • {story.readTime}
-        </p>
+                <div className="mt-5">
+                  <p className="text-[0.68rem] font-bold uppercase tracking-[0.24em] text-stone-500">
+                    {story.category} • {story.readTime}
+                  </p>
 
-        <h1 className="mt-2 text-4xl font-black leading-[0.95] tracking-tight text-stone-900">
-          {story.title}
-        </h1>
+                  <h1 className="mt-2 text-4xl font-black leading-[0.95] tracking-tight text-stone-900">
+                    {story.title}
+                  </h1>
 
-        <p className="mt-3 text-lg leading-7 text-stone-600">
-          {story.summary}
-        </p>
-      </div>
-    </div>
+                  <p className="mt-3 text-lg leading-7 text-stone-600">
+                    {story.summary}
+                  </p>
+                </div>
+              </div>
 
-    {/* Desktop */}
-    <div className="relative hidden overflow-hidden rounded-3xl bg-black shadow-sm sm:block">
-      <img
-        src={story.hero.src}
-        alt={story.hero.alt}
-        className="aspect-[16/9] w-full object-cover"
-      />
+              <div className="relative hidden overflow-hidden rounded-3xl bg-black shadow-sm sm:block">
+                <img
+                  src={story.hero.src}
+                  alt={story.hero.alt}
+                  className="aspect-[16/9] w-full object-cover"
+                />
 
-      <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent" />
 
-      <div className="absolute inset-0 flex items-end p-12">
-        <div className="max-w-3xl text-white drop-shadow-sm">
-          <p className="text-xs font-bold uppercase tracking-[0.28em] text-white/80">
-            {story.category} • {story.readTime}
-          </p>
+                <div className="absolute inset-0 flex items-end p-12">
+                  <div className="max-w-3xl text-white drop-shadow-sm">
+                    <p className="text-xs font-bold uppercase tracking-[0.28em] text-white/80">
+                      {story.category} • {story.readTime}
+                    </p>
 
-          <h1 className="mt-4 text-7xl font-black leading-none tracking-tight">
-            {story.title}
-          </h1>
+                    <h1 className="mt-4 text-7xl font-black leading-none tracking-tight">
+                      {story.title}
+                    </h1>
 
-          <p className="mt-5 max-w-xl text-2xl font-medium leading-9 text-white/90">
-            {story.summary}
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-)}
-
+                    <p className="mt-5 max-w-xl text-2xl font-medium leading-9 text-white/90">
+                      {story.summary}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+          )}
 
           <section className="mx-auto max-w-2xl bg-white px-5 pb-16 pt-10 text-gray-900 sm:px-8 sm:pt-12">
             <div className="space-y-3 text-lg leading-7 text-gray-900 sm:text-[1.08rem] sm:leading-8">
@@ -231,18 +209,14 @@ export default async function StoryPage({
                       {cleanedParagraph}
                     </p>
 
-                    {imageAfterParagraph && (
-                      <StoryImageBlock image={imageAfterParagraph} />
-                    )}
+                    {imageAfterParagraph && <StoryImageBlock image={imageAfterParagraph} />}
                   </div>
                 );
               })}
             </div>
 
-            <section className="mt-12">
-              <h2 className="text-2xl font-black tracking-tight">
-                What's your take?
-              </h2>
+            <section className="mt-10">
+              <h2 className="text-2xl font-black tracking-tight">What's your take?</h2>
 
               <VoteButtons
                 storySlug={story.slug}
@@ -251,7 +225,23 @@ export default async function StoryPage({
               />
             </section>
 
+
+            {nextStory && (
+              <section className="mt-10 border-t border-stone-200 pt-8">
+                <p className="text-sm font-bold uppercase tracking-[0.24em] text-stone-500">
+                  Still Curious?
+                </p>
+
+                <Link
+                  href={`/story/${nextStory.slug}`}
+                  className="mt-3 block text-3xl font-black tracking-tight sm:text-4xl hover:text-black transition"
+                >
+                  {nextStory.title} →
+                </Link>
+              </section>
+            )}
             <ShareButtons title={story.title} slug={story.slug} />
+
           </section>
         </article>
       </main>

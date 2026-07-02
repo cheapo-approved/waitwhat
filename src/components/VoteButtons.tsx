@@ -69,7 +69,7 @@ export default function VoteButtons({
         : Math.max(1, Math.round((percentValue / 100) * totalSymbols));
 
     return (
-      <div className="flex flex-1 items-center gap-1 overflow-hidden">
+      <div className="flex flex-1 items-center gap-1.5 overflow-hidden">
         {Array.from({ length: totalSymbols }).map((_, index) => {
           const filled = index < filledSymbols;
           const src =
@@ -82,7 +82,7 @@ export default function VoteButtons({
               key={index}
               src={src}
               alt=""
-              className={`h-2.5 w-2.5 shrink-0 object-contain transition-all duration-500 ${
+              className={`h-3.5 w-3.5 shrink-0 object-contain transition-all duration-500 sm:h-4 sm:w-4 ${
                 filled ? "opacity-80" : "opacity-15"
               }`}
             />
