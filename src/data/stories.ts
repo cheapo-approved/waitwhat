@@ -10,8 +10,10 @@ import { explodingWhale } from "@/data/stories/exploding-whale";
 import { emuWar } from "@/data/stories/emu-war";
 import { timothyDexter } from "@/data/stories/timothy-dexter";
 import { dymaxion } from "@/data/stories/dymaxion";
+import { donaldKendall } from "@/data/stories/donald-kendall";
 
 export const stories: Story[] = [
+  donaldKendall,
   dymaxion,
   timothyDexter,
   emuWar,

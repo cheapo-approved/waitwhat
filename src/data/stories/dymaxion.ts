@@ -5,7 +5,7 @@ export const dymaxion: Story = {
   title: "Chicago Came to See the Future",
   category: "Forgotten Futures",
   readTime: "5 min read",
-  featured: true,
+  featured: false,
   summary:
     "Nobody expected it to show up looking like...that!",
 
