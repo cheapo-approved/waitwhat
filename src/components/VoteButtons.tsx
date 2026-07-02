@@ -27,15 +27,20 @@ export default function VoteButtons({
   const [optimistic, addVote] = useOptimistic(
     { counts, userVote },
     (state, vote: Vote) => {
-      const next = { counts: { ...state.counts }, userVote: vote };
-      if (state.userVote) next.counts[state.userVote]--;
-      next.counts[vote]++;
-      return next;
+      if (state.userVote) return state;
+
+      return {
+        counts: {
+          ...state.counts,
+          [vote]: state.counts[vote] + 1,
+        },
+        userVote: vote,
+      };
     }
   );
 
   function vote(v: Vote) {
-    if (pending) return;
+    if (pending || optimistic.userVote) return;
 
     startTransition(async () => {
       addVote(v);
@@ -58,10 +63,10 @@ export default function VoteButtons({
     percentValue: number;
   }) {
     const totalSymbols = 12;
-    const filledSymbols = Math.max(
-      1,
-      Math.round((percentValue / 100) * totalSymbols)
-    );
+    const filledSymbols =
+      percentValue === 0
+        ? 0
+        : Math.max(1, Math.round((percentValue / 100) * totalSymbols));
 
     return (
       <div className="flex flex-1 items-center gap-1 overflow-hidden">
@@ -101,12 +106,19 @@ export default function VoteButtons({
     const selected = optimistic.userVote === voteType;
     const otherSelected = optimistic.userVote && !selected;
     const percentValue = percent(voteType);
+    const votingClosed = Boolean(optimistic.userVote) || pending;
 
     return (
       <button
+        type="button"
         onClick={() => vote(voteType)}
         disabled={pending}
-        className={`group w-full rounded-xl border px-3.5 py-2 text-left transition-all duration-200 hover:-translate-y-0.5 hover:border-black hover:shadow-md disabled:cursor-not-allowed ${
+        aria-pressed={selected}
+        className={`group w-full rounded-xl border px-3.5 py-2 text-left transition-all duration-200 ${
+          votingClosed
+            ? "cursor-default"
+            : "hover:-translate-y-0.5 hover:border-black hover:shadow-md"
+        } ${
           selected
             ? "border-black bg-black text-white shadow-md"
             : "border-stone-200 bg-white text-gray-900"
@@ -128,7 +140,7 @@ export default function VoteButtons({
                 : "text-stone-300 group-hover:text-black"
             }`}
           >
-            →
+            {selected ? "✓" : "→"}
           </span>
         </div>
 
