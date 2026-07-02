@@ -153,7 +153,7 @@ export default async function StoryPage({
 
   return (
     <PageShell>
-      <main>
+      <main className="bg-white text-gray-900">
         <article>
           {story.hero && (
   <section className="mx-auto max-w-6xl px-5 pt-4 sm:px-8 sm:pt-8">
@@ -212,7 +212,7 @@ export default async function StoryPage({
 )}
 
 
-          <section className="mx-auto max-w-2xl px-5 pb-16 pt-10 sm:px-8 sm:pt-12">
+          <section className="mx-auto max-w-2xl bg-white px-5 pb-16 pt-10 text-gray-900 sm:px-8 sm:pt-12">
             <div className="space-y-3 text-lg leading-7 text-gray-900 sm:text-[1.08rem] sm:leading-8">
               {story.body.map((paragraph, index) => {
                 const imageAfterParagraph = imagesByIndex.get(index);
