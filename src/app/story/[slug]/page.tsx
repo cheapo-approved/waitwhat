@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import PageShell from "@/components/PageShell";
 import VoteButtons from "@/components/VoteButtons";
 import ShareButtons from "@/components/ShareButtons";
@@ -5,6 +6,58 @@ import { getStory } from "@/lib/getStory";
 import { getVoteCounts } from "@/lib/votes";
 import { notFound } from "next/navigation";
 import type { StoryImage as StoryImageType } from "@/types/story";
+
+const siteUrl = "https://waitwhat.media";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const story = getStory(slug);
+
+  if (!story) {
+    return {
+      title: "Story Not Found",
+    };
+  }
+
+  const imageUrl = story.hero?.src
+    ? `${siteUrl}${story.hero.src}`
+    : `${siteUrl}/brand/waitwhat-logo.png`;
+
+  const storyUrl = `${siteUrl}/story/${story.slug}`;
+
+  return {
+    title: story.title,
+    description: story.summary,
+    alternates: {
+      canonical: storyUrl,
+    },
+    openGraph: {
+      title: story.title,
+      description: story.summary,
+      url: storyUrl,
+      siteName: "Wait...What?!",
+      type: "article",
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 675,
+          alt: story.hero?.alt ?? story.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: story.title,
+      description: story.summary,
+      images: [imageUrl],
+    },
+  };
+}
 
 const imageKindLabels: Record<string, string> = {
   curator: "Curator's Note",
