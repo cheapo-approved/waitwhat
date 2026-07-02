@@ -33,6 +33,39 @@ export default function PageShell({
       </header>
 
       {children}
+
+      <footer className="mt-20 border-t border-gray-200 bg-stone-50">
+        <div className="mx-auto max-w-6xl px-5 py-10 text-center sm:px-8">
+          <Link
+            href="/random"
+            className="text-lg font-black tracking-tight transition hover:opacity-70"
+          >
+            Still wondering?
+          </Link>
+
+          <nav className="mt-6 flex flex-wrap items-center justify-center gap-6 text-sm font-semibold uppercase tracking-[0.16em] text-gray-600">
+            <Link href="/" className="hover:text-black">
+              Home
+            </Link>
+
+            <Link href="/random" className="hover:text-black">
+              Random
+            </Link>
+
+            <Link href="/about" className="hover:text-black">
+              About
+            </Link>
+
+            <Link href="/contact" className="hover:text-black">
+              Contact
+            </Link>
+          </nav>
+
+          <p className="mt-8 text-xs uppercase tracking-[0.22em] text-gray-400">
+            © {new Date().getFullYear()} WAIT...WHAT?!
+          </p>
+        </div>
+      </footer>
     </>
   );
 }
