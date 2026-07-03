@@ -198,7 +198,7 @@ export const donaldKendall: Story = {
     "More snacks.",
     "Somewhere along the way I stopped naming brands...",
     "...and started naming the effects of Donald Kendall.",
-    "Then then it was lunch.",
+    "Then it was lunch.",
     "Grabbed the hoagie roll.",
     "Reached for the chips.",
     "Opened a Pepsi.",
