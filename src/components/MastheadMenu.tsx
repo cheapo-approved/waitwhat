@@ -41,7 +41,7 @@ export default function MastheadMenu() {
         onClick={() => setOpen((current) => !current)}
         aria-label={open ? "Close menu" : "Open menu"}
         aria-expanded={open}
-        className="rounded-lg px-2 py-1 text-3xl font-black leading-none text-gray-700 transition hover:bg-gray-100 hover:text-black"
+        className="cursor-pointer rounded-lg px-2 py-1 text-3xl font-black leading-none text-gray-700 transition hover:bg-gray-100 hover:text-black"
       >
         {open ? "×" : "☰"}
       </button>
@@ -54,7 +54,7 @@ export default function MastheadMenu() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="block px-6 py-5 text-sm font-black uppercase tracking-[0.22em] text-stone-700 transition hover:bg-stone-50 hover:text-black"
+                className="block cursor-pointer px-6 py-5 text-sm font-black uppercase tracking-[0.22em] text-stone-700 transition hover:bg-stone-50 hover:text-black"
               >
                 {link.label}
               </Link>
