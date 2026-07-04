@@ -20,14 +20,14 @@ export const gameline: Story = {
       after: 60,
       alt: "GameLine Master Module cartridge for the Atari 2600",
       caption:
-        "The GameLine Master Module. It looks innocent enough...until you remember it wanted a phone line.",
+        "It looked like an Atari cartridge. It didn't think like one.",
     },
     {
       src: "/images/gameline/2.jpg",
       after: 95,
       alt: "Vintage GameLine advertisement promising Atari games through a telephone",
       caption:
-        "Read that promise again. Through your telephone. In 1983.",
+        "They weren't trying to reinvent Atari. They were trying to reinvent home.",
     },
     {
       src: "/images/gameline/3.jpg",
