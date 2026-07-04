@@ -21,21 +21,21 @@ export const dymaxion: Story = {
       after: 45,
       alt: "First clear look at the car. World's Fair setting.",
       caption:
-        "The first glimpse. Visitors at Chicago's 1933 World's Fair stop to figure out what they're looking at. Honestly...I'd probably stop too.",
+        "The first challenge wasn't understanding it. It was figuring out what it was.",
     },
     {
       src: "/images/dymaxion/2.jpg",
       after: 103,
       alt: "Perfect payoff after explaining rear-wheel steering, Ford V8, and aircraft thinking.",
       caption:
-        "Under the skin. Strip away the aluminum body and you start seeing the engineering decisions that made the Dymaxion unlike anything else on the road.",
+        "Once you see how it was built... the shape starts making sense.",
     },
     {
       src: "/images/dymaxion/3.jpg",
-      after: 128,
+      after: 123,
       alt: "Makes readers connect with Fuller, the inventor instead of just the machine.",
       caption:
-        "Buckminster Fuller beside his creation. The strange part wasn't the car. It was the man asking questions nobody else thought to ask.",
+        "The strangest thing here wasn't the car.",
       
     },
   ],
