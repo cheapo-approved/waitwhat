@@ -17,21 +17,21 @@ export const dancingPlague: Story = {
   images: [
     {
       src: "/images/dancing-plague/1.jpg",
-      after: 23,
+      after: 19,
       alt: "A medieval illustration depicting people dancing in the streets",
-      caption: "What began with one person quickly became something much stranger.",
+      caption: "One dancer is strange. The second one changes everything.",
     },
     {
       src: "/images/dancing-plague/2.jpg",
       after: 60,
       alt: "A historical illustration of musicians performing for dancers in medieval Europe",
-      caption: "The town's solution only made the mystery even harder to explain.",
+      caption: "When nobody knew how to stop it, the town tried adding music.",
     },
     {
       src: "/images/dancing-plague/3.jpg",
-      after: 89,
+      after: 91,
       alt: "An empty cobblestone street in an old European town at dusk",
-      caption: "Five hundred years later, we're still asking the same question.",
+      caption: "The hardest question was never why she started.",
     },
   ],
 
