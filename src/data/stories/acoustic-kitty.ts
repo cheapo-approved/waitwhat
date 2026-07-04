@@ -18,21 +18,21 @@ export const acousticKitty: Story = {
   images: [
     {
       src: "/images/acoustic-kitty/1.jpg",
-      after: 18,
+      after: 35,
       alt: "A tense Cold War era command room with maps and intelligence officers",
       caption:
         "Sometimes the most dangerous weapon was information.",
     },
     {
       src: "/images/acoustic-kitty/2.jpg",
-      after: 49,
+      after: 57,
       alt: "A curious cat sitting calmly beside miniature electronic components",
       caption:
         "Someone actually signed off on this.",
     },
     {
       src: "/images/acoustic-kitty/3.jpg",
-      after: 83,
+      after: 80,
       alt: "A quiet park bench in the early 1960s",
       caption:
         "Even the ending has an asterisk.",
