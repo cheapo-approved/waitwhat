@@ -15,19 +15,19 @@ const story = {
   {
     src: "/images/the-stones/1.jpg",
     alt: "Large stone wheel resting in a tropical village",
-    caption: "Rai stones could be too large to move, so ownership often changed while the stone stayed in place.",
+    caption: "The stone stayed. The owner changed.",
     after: 45,
   },
   {
     src: "/images/the-stones/2.jpg",
     alt: "Pacific island coastline with canoes and palm trees",
-    caption: "The limestone used for rai stones came from distant islands and had to be brought home across open ocean.",
+    caption: "Every stone had already survived an impossible journey.",
     after: 65,
   },
   {
     src: "/images/the-stones/3.jpg",
     alt: "Stone money of Yap surrounded by tropical landscape",
-    caption: "Some rai stones were valued not just for their size, but for the story of how they were made and transported.",
+    caption: "The story became part of the stone.",
     after: 91,
   },
 ],

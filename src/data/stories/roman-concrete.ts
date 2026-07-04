@@ -19,13 +19,13 @@ export const romanConcrete: Story = {
       src: "/images/roman-concrete/1.jpg",
       after: 60,
       alt: "Ancient Roman concrete structure or seawall",
-      caption: "The Romans built this stuff to survive water, weather, and time.",
+      caption: "The ocean spent two thousand years trying to prove them wrong.",
     },
     {
       src: "/images/roman-concrete/2.jpg",
       after: 86,
       alt: "Close-up of Roman concrete showing small white lime chunks",
-      caption: "For decades, these little white chunks looked like sloppy work.",
+      caption: "Everyone thought these were mistakes.",
     },
     {
       src: "/images/roman-concrete/3.jpg",
