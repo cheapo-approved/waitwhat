@@ -6,7 +6,7 @@ export const gameline: Story = {
   category: "Forgotten Futures",
   readTime: "4 min read",
   featured: false,
-  summary: "Perfect timing for Wait...What?!",
+  summary: "The future showed up. Nobody answered the phone.",
 
   hero: {
     src: "/images/gameline/hero.png",
