@@ -29,7 +29,7 @@ export const rcaVideoDisc: Story = {
       after: 63,
       alt: "RCA SelectaVision player connected to a television",
       caption:
-        "The machine played movies using a stylus that physically traced grooves in the disc.",
+        "No laser. No tape. Just a needle reading a movie.",
     },
     {
       src: "/images/rca-video-disc/3.jpg",
