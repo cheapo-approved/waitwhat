@@ -22,14 +22,14 @@ export const donaldKendall: Story = {
       after: 24,
       alt: "Richard Nixon and Nikita Khrushchev during the Kitchen Debate",
       caption:
-        "One cup of Pepsi at the Kitchen Debate helped open a relationship that Donald Kendall would spend the next thirty years building.",
+        "Most people saw a photo. Donald Kendall saw thirty years of opportunity.",
     },
     {
       src: "/images/donald-kendall/2.jpg",
       after: 50,
       alt: "A 1970s Pepsi boardroom discussing expansion beyond soft drinks",
       caption:
-        "By the late 1980s, Donald wasn't just selling Pepsi. He was helping bring American brands like Pizza Hut behind the Iron Curtain.",
+        "Every new company answered the same question: \"What else we got?\"",
     },
     {
       src: "/images/donald-kendall/3.jpg",
