@@ -17,22 +17,22 @@ export const antikythera: Story = {
   images: [
     {
       src: "/images/antikythera/1.jpg",
-      after: 24,
+      after: 34,
       alt: "A corroded bronze fragment recovered from an ancient shipwreck",
       caption:
-        "For decades, nobody thought this ugly little thing was worth a second look.",
+        "The most important discovery in the room looked like the least interesting one.",
     },
     {
       src: "/images/antikythera/2.jpg",
-      after: 69,
+      after: 73,
       alt: "A detailed scan or internal view of the mysterious bronze object",
       caption: "The first peek inside raised more questions than answers.",
     },
     {
       src: "/images/antikythera/3.jpg",
-      after: 108,
+      after: 98,
       alt: "A modern reconstruction of the mysterious ancient object",
-      caption: "The deeper they looked, the stranger the story became.",
+      caption: "Turns out... the gears were the easy part.",
     },
   ],
 
