@@ -18,21 +18,21 @@ export const explodingWhale: Story = {
   images: [
     {
       src: "/images/exploding-whale/1.jpg",
-      after: 20,
+      after: 25,
       alt: "A large whale washed ashore on a beach",
       caption:
-        "A 45-foot sperm whale turned into a very public problem.",
+        "Someone had to be in charge. I don't envy that person.",
     },
     {
       src: "/images/exploding-whale/2.jpg",
-      after: 56,
+      after: 66,
       alt: "A beach explosion sending debris into the air",
       caption:
         "The plan was simple. The result was not.",
     },
     {
       src: "/images/exploding-whale/3.jpg",
-      after: 87,
+      after: 78,
       alt: "A vintage television news crew filming on a beach",
       caption:
         "Fortunately for history, the cameras were rolling.",

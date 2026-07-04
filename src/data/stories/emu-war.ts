@@ -19,21 +19,21 @@ export const emuWar: Story = {
   images: [
     {
       src: "/images/emu-war/1.jpg",
-      after: 20,
+      after: 23,
       alt: "Wide wheat fields in Western Australia during the early 1930s",
       caption:
         "The war was over. Their next battle wasn't.",
     },
     {
       src: "/images/emu-war/2.jpg",
-      after: 52,
+      after: 54,
       alt: "A large emu standing in an open wheat field",
       caption:
         "The invaders weren't what anyone expected.",
     },
     {
       src: "/images/emu-war/3.jpg",
-      after: 95,
+      after: 97,
       alt: "Australian soldiers with a truck-mounted machine gun in rugged terrain",
       caption:
         "Technology wasn't the problem. Expectations were.",
