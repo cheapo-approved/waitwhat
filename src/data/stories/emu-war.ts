@@ -22,7 +22,7 @@ export const emuWar: Story = {
       after: 20,
       alt: "Wide wheat fields in Western Australia during the early 1930s",
       caption:
-        "After World War I, many Australian veterans tried to build new lives on farmland.",
+        "The war was over. Their next battle wasn't.",
     },
     {
       src: "/images/emu-war/2.jpg",
@@ -36,7 +36,7 @@ export const emuWar: Story = {
       after: 95,
       alt: "Australian soldiers with a truck-mounted machine gun in rugged terrain",
       caption:
-        "Some problems refuse to cooperate with even the best-equipped solutions.",
+        "Technology wasn't the problem. Expectations were.",
     },
   ],
 
