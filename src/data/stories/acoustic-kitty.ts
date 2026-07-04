@@ -21,21 +21,21 @@ export const acousticKitty: Story = {
       after: 18,
       alt: "A tense Cold War era command room with maps and intelligence officers",
       caption:
-        "During the Cold War, information could be as valuable as weapons.",
+        "Sometimes the most dangerous weapon was information.",
     },
     {
       src: "/images/acoustic-kitty/2.jpg",
       after: 49,
       alt: "A curious cat sitting calmly beside miniature electronic components",
       caption:
-        "The solution wasn't just unusual... it became an actual CIA project.",
+        "Someone actually signed off on this.",
     },
     {
       src: "/images/acoustic-kitty/3.jpg",
       after: 83,
       alt: "A quiet park bench in the early 1960s",
       caption:
-        "The first field test has become almost as mysterious as the project itself.",
+        "Even the ending has an asterisk.",
     },
   ],
 
