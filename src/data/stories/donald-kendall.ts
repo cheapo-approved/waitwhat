@@ -5,7 +5,7 @@ export const donaldKendall: Story = {
   title: "Pepsi Once Had the World's Sixth Largest Navy",
   category: "Business",
   readTime: "7 min read",
-  featured: true,
+  featured: false,
   summary:
     "No, they weren't planning to invade Coke.",
 

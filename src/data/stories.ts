@@ -11,18 +11,20 @@ import { emuWar } from "@/data/stories/emu-war";
 import { timothyDexter } from "@/data/stories/timothy-dexter";
 import { dymaxion } from "@/data/stories/dymaxion";
 import { donaldKendall } from "@/data/stories/donald-kendall";
+import { poyais } from "@/data/stories/poyais";
 
 export const stories: Story[] = [
+  poyais,
   donaldKendall,
-  dymaxion,
   timothyDexter,
-  emuWar,
   explodingWhale,
+  gameline,
   acousticKitty,
+  romanConcrete,
+  antikythera,
+  theStones,
+  emuWar,
   dancingPlague,
   rcaVideoDisc,
-  theStones,
-  romanConcrete,
-  gameline,
-  antikythera,
+  dymaxion,
 ];
