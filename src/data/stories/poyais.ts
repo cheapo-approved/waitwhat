@@ -36,7 +36,7 @@ export const poyais: Story = {
       after: 94,
       alt: "Settlers standing on a tropical shoreline staring into untouched jungle where a capital city was supposed to be",
       caption:
-        "Finally, home felt within reach.",
+        "A promise you can finally keep.",
     },
   ],
 
