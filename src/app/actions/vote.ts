@@ -2,7 +2,7 @@
 
 import { cookies } from "next/headers";
 import { revalidatePath } from "next/cache";
-import { addVote } from "@/lib/votes";
+import { addVote, getVoteCounts } from "@/lib/votes";
 
 async function getOrCreateVoterId() {
   const cookieStore = await cookies();
@@ -27,6 +27,13 @@ export async function submitVote(storySlug: string, vote: "WAIT" | "WHAT") {
 
   await addVote(storySlug, vote, voterId);
 
+  const counts = await getVoteCounts(storySlug);
+
   revalidatePath(`/story/${storySlug}`);
   revalidatePath("/");
+
+  return {
+    counts,
+    userVote: vote,
+  };
 }

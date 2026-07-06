@@ -36,10 +36,7 @@ export default function ShareButtons({
   }
 
   return (
-    <section className="mt-8 border-t border-stone-200 pt-6 text-center">
-      <p className="text-xs font-black uppercase tracking-[0.28em] text-stone-500">
-        Share this story
-      </p>
+    <div className="text-center">
 
       <div className="mt-4 flex justify-center gap-3">
         <button
@@ -56,6 +53,6 @@ export default function ShareButtons({
           {copied ? "Copied!" : "Copy"}
         </button>
       </div>
-    </section>
+    </div>
   );
 }

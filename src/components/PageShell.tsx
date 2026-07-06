@@ -8,7 +8,7 @@ export default function PageShell({
   children: React.ReactNode;
 }) {
   return (
-    <>
+    <div className="min-h-screen bg-white">
       <header className="border-b border-gray-200 bg-gradient-to-b from-gray-50 to-white">
         <div className="mx-auto flex max-w-6xl items-end justify-between px-5 pt-6 pb-5 sm:px-8 sm:pt-7 sm:pb-6">
           <div>
@@ -34,16 +34,9 @@ export default function PageShell({
 
       {children}
 
-      <footer className="mt-20 border-t border-gray-200 bg-stone-50">
-        <div className="mx-auto max-w-6xl px-5 py-10 text-center sm:px-8">
-          <Link
-            href="/random"
-            className="text-lg font-black tracking-tight transition hover:opacity-70"
-          >
-            Still wondering?
-          </Link>
-
-          <nav className="mt-6 flex flex-wrap items-center justify-center gap-6 text-sm font-semibold uppercase tracking-[0.16em] text-gray-600">
+      <footer className="mt-4 border-t border-gray-200 bg-white">
+        <div className="mx-auto max-w-6xl px-5 py-7 text-center sm:px-8 sm:py-8">
+          <nav className="flex flex-wrap items-center justify-center gap-6 text-sm font-semibold uppercase tracking-[0.16em] text-gray-600">
             <Link href="/" className="hover:text-black">
               Home
             </Link>
@@ -61,11 +54,11 @@ export default function PageShell({
             </Link>
           </nav>
 
-          <p className="mt-8 text-xs uppercase tracking-[0.22em] text-gray-400">
+          <p className="mt-5 text-xs uppercase tracking-[0.22em] text-gray-400">
             © {new Date().getFullYear()} WAIT...WHAT?!
           </p>
         </div>
       </footer>
-    </>
+    </div>
   );
 }

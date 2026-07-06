@@ -1,6 +1,6 @@
 "use client";
 
-import { useOptimistic, useTransition } from "react";
+import { useState, useTransition } from "react";
 import { submitVote } from "@/app/actions/vote";
 
 type Vote = "WAIT" | "WHAT";
@@ -23,36 +23,25 @@ export default function VoteButtons({
   userVote?: Vote;
 }) {
   const [pending, startTransition] = useTransition();
-
-  const [optimistic, addVote] = useOptimistic(
-    { counts, userVote },
-    (state, vote: Vote) => {
-      if (state.userVote) return state;
-
-      return {
-        counts: {
-          ...state.counts,
-          [vote]: state.counts[vote] + 1,
-        },
-        userVote: vote,
-      };
-    }
-  );
+  const [currentCounts, setCurrentCounts] = useState(counts);
+  const [currentVote, setCurrentVote] = useState<Vote | undefined>(userVote);
 
   function vote(v: Vote) {
-    if (pending || optimistic.userVote) return;
+    if (pending || currentVote === v) return;
 
     startTransition(async () => {
-      addVote(v);
-      await submitVote(storySlug, v);
+      const result = await submitVote(storySlug, v);
+
+      setCurrentCounts(result.counts);
+      setCurrentVote(result.userVote);
     });
   }
 
-  const total = optimistic.counts.WAIT + optimistic.counts.WHAT;
+  const total = currentCounts.WAIT + currentCounts.WHAT;
 
   function percent(v: Vote) {
     if (total === 0) return 0;
-    return Math.round((optimistic.counts[v] / total) * 100);
+    return Math.round((currentCounts[v] / total) * 100);
   }
 
   function SymbolMeter({
@@ -103,22 +92,24 @@ export default function VoteButtons({
     logoAlt: string;
     description: string;
   }) {
-    const selected = optimistic.userVote === voteType;
-    const otherSelected = optimistic.userVote && !selected;
+    const selected = currentVote === voteType;
+    const otherSelected = currentVote && !selected;
     const percentValue = percent(voteType);
-    const votingClosed = Boolean(optimistic.userVote) || pending;
+    const votingClosed = pending || selected;
 
     return (
       <button
         type="button"
         onClick={() => vote(voteType)}
-        disabled={pending}
+        disabled={pending || selected}
         aria-pressed={selected}
         className={`group w-full rounded-xl border px-3.5 py-2 text-left transition-all duration-200 ${
-          votingClosed
-            ? "cursor-default"
-            : "hover:-translate-y-0.5 hover:border-black hover:shadow-md"
-        } ${
+  pending
+    ? "cursor-wait"
+    : selected
+      ? "cursor-default"
+      : "cursor-pointer hover:-translate-y-0.5 hover:border-black hover:shadow-md"
+} ${
           selected
             ? "border-black bg-black text-white shadow-md"
             : "border-stone-200 bg-white text-gray-900"
@@ -140,7 +131,7 @@ export default function VoteButtons({
                 : "text-stone-300 group-hover:text-black"
             }`}
           >
-            {selected ? "✓" : "→"}
+            {selected ? "✓" : pending ? "…" : "→"}
           </span>
         </div>
 

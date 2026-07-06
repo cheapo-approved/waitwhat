@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { cookies } from "next/headers";
 import PageShell from "@/components/PageShell";
 import VoteButtons from "@/components/VoteButtons";
 import ShareButtons from "@/components/ShareButtons";
 import { getAllStories, getStory } from "@/lib/getStory";
-import { getVoteCounts } from "@/lib/votes";
+import { getVoteCounts, getUserVote } from "@/lib/votes";
 import { notFound } from "next/navigation";
 import type { StoryImage as StoryImageType } from "@/types/story";
 
@@ -38,7 +39,14 @@ export async function generateMetadata({
       url: storyUrl,
       siteName: "Wait...What?!",
       type: "article",
-      images: [{ url: imageUrl, width: 1200, height: 675, alt: story.hero?.alt ?? story.title }],
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 675,
+          alt: story.hero?.alt ?? story.title,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
@@ -65,7 +73,11 @@ const imageKindStyles: Record<string, string> = {
   artifact: "text-violet-700",
 };
 
-function StoryImageBlock({ image }: { image: StoryImageType & { kind?: string } }) {
+function StoryImageBlock({
+  image,
+}: {
+  image: StoryImageType & { kind?: string };
+}) {
   const imageKind = image.kind;
   const label = imageKind ? imageKindLabels[imageKind] : undefined;
   const labelStyle = imageKind
@@ -73,19 +85,31 @@ function StoryImageBlock({ image }: { image: StoryImageType & { kind?: string } 
     : "text-stone-500";
 
   return (
-    <figure className="my-6 overflow-hidden rounded-3xl border border-stone-200 bg-stone-50 shadow-sm sm:my-8">
-      <div className="overflow-hidden bg-stone-100">
-        <img src={image.src} alt={image.alt} className="h-auto w-full" />
+    <figure className="my-6 overflow-hidden rounded-3xl border border-stone-200 bg-white shadow-sm sm:my-8">
+      <div className="overflow-hidden bg-stone-100 p-2 sm:p-3">
+        <img
+          src={image.src}
+          alt={image.alt}
+          className="h-auto w-full rounded-2xl"
+        />
       </div>
 
-      <figcaption className="border-t border-stone-200 px-5 py-3 sm:px-6 sm:py-4">
+      <figcaption className="border-t border-stone-200 px-5 py-3 text-center sm:px-6 sm:py-4">
         {label && (
-          <p className={`text-[0.68rem] font-bold uppercase tracking-[0.22em] ${labelStyle}`}>
+          <p
+            className={`text-[0.68rem] font-bold uppercase tracking-[0.22em] ${labelStyle}`}
+          >
             {label}
           </p>
         )}
 
-        <p className={label ? "mt-2 text-sm leading-6 text-stone-600" : "text-sm leading-6 text-stone-600"}>
+        <p
+          className={
+            label
+              ? "mx-auto mt-2 max-w-2xl text-sm italic leading-6 text-stone-600"
+              : "mx-auto max-w-2xl text-sm italic leading-6 text-stone-600"
+          }
+        >
           {image.caption}
         </p>
       </figcaption>
@@ -119,10 +143,20 @@ export default async function StoryPage({
 
   if (!story) notFound();
 
-  const counts = await getVoteCounts(story.slug);
+  const cookieStore = await cookies();
+  const voterId = cookieStore.get("waitwhat_voter_id")?.value;
 
-  const otherStories = getAllStories().filter((item) => item.slug !== story.slug);
-  const nextStory = otherStories[Math.floor(Math.random() * otherStories.length)];
+  const counts = await getVoteCounts(story.slug);
+  const userVote = await getUserVote(story.slug, voterId);
+
+  const otherStories = getAllStories().filter(
+    (item) => item.slug !== story.slug
+  );
+
+  const nextStory =
+    otherStories.length > 0
+      ? otherStories[Math.floor(Math.random() * otherStories.length)]
+      : undefined;
 
   const imagesByIndex = new Map<number, StoryImageType & { kind?: string }>();
 
@@ -190,7 +224,7 @@ export default async function StoryPage({
             </section>
           )}
 
-          <section className="mx-auto max-w-2xl bg-white px-5 pb-16 pt-10 text-gray-900 sm:px-8 sm:pt-12">
+          <section className="mx-auto max-w-2xl bg-white px-5 pb-8 pt-10 text-gray-900 sm:px-8 sm:pb-10 sm:pt-12">
             <div className="space-y-3 text-lg leading-7 text-gray-900 sm:text-[1.08rem] sm:leading-8">
               {story.body.map((paragraph, index) => {
                 const imageAfterParagraph = imagesByIndex.get(index);
@@ -209,39 +243,48 @@ export default async function StoryPage({
                       {cleanedParagraph}
                     </p>
 
-                    {imageAfterParagraph && <StoryImageBlock image={imageAfterParagraph} />}
+                    {imageAfterParagraph && (
+                      <StoryImageBlock image={imageAfterParagraph} />
+                    )}
                   </div>
                 );
               })}
             </div>
 
-            <section className="mt-10">
-              <h2 className="text-2xl font-black tracking-tight">What's your take?</h2>
+            <section className="mt-8">
+              <h2 className="text-2xl font-black tracking-tight">
+                What's your take?
+              </h2>
 
               <VoteButtons
                 storySlug={story.slug}
                 counts={counts}
-                userVote={undefined}
+                userVote={userVote}
               />
             </section>
 
+            <section className="mt-4 border-t border-stone-200 pt-4">
+              <ShareButtons title={story.title} slug={story.slug} />
+            </section>
 
             {nextStory && (
-              <section className="mt-10 border-t border-stone-200 pt-8">
+              <section className="mt-6 border-t border-stone-200 pt-5">
                 <p className="text-sm font-bold uppercase tracking-[0.24em] text-stone-500">
-                  Still Curious?
+                  Next Discovery
                 </p>
 
                 <Link
                   href={`/story/${nextStory.slug}`}
-                  className="mt-3 block text-3xl font-black tracking-tight sm:text-4xl hover:text-black transition"
+                  className="group mt-2 flex items-center justify-between gap-4 text-3xl font-black tracking-tight transition sm:text-4xl"
                 >
-                  {nextStory.title} →
+                  <span>{nextStory.title}</span>
+
+                  <span className="shrink-0 text-stone-400 transition-all duration-200 group-hover:translate-x-1 group-hover:text-black">
+                    →
+                  </span>
                 </Link>
               </section>
             )}
-            <ShareButtons title={story.title} slug={story.slug} />
-
           </section>
         </article>
       </main>
