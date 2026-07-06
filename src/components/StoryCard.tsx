@@ -21,7 +21,7 @@ export default function StoryCard({
     >
       {heroImage && (
         <div
-          className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+          className="absolute inset-0 bg-cover bg-[60%_center] transition-transform duration-700 group-hover:scale-105 sm:bg-center"
           style={{ backgroundImage: `url(${heroImage})` }}
         />
       )}
