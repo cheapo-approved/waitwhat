@@ -264,6 +264,7 @@ export const poyais: Story = {
 "They returned thinner.",
 "Quieter.",
 "Carrying far less than they had left with.",
+"Not every seat around the table was filled again.",
 "Some families came home broken.",
 "Some did not come home at all.",
 "...",
