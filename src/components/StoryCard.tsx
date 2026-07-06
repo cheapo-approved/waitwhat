@@ -14,7 +14,9 @@ export default function StoryCard({
     <Link
       href={`/story/${story.slug}`}
       className={`group relative block overflow-hidden rounded-3xl border border-gray-300 bg-black transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl ${
-        featured ? "min-h-[420px]" : "min-h-[280px]"
+        featured
+          ? "min-h-[360px] sm:min-h-[420px]"
+          : "min-h-[280px]"
       }`}
     >
       {heroImage && (
