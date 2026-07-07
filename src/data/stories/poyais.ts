@@ -5,7 +5,7 @@ export const poyais: Story = {
   title: "A Place Called Poyais",
   category: "Hidden History",
   readTime: "8 min read",
-  featured: true,
+  featured: false,
   summary:
     "Before they crossed an ocean...they had already arrived.",
 
