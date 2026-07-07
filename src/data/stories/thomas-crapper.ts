@@ -25,7 +25,7 @@ export const thomasCrapper: Story = {
     },
     {
       src: "/images/thomas-crapper/2.jpg",
-      after: 74,
+      after: 75,
       alt: "A vintage bathroom showroom displaying toilets sinks and brass fixtures",
       caption:
         "Thomas Crapper didn't invent the toilet - but he built a business that proudly put his name on quality plumbing.",
@@ -76,7 +76,8 @@ export const thomasCrapper: Story = {
     "Built a company trusted by the royal household.",
     "So far...",
     "pretty impressive.",
-    "Then I found George Jennings.",
+    "Then I found more successful and accomplished plumbers.",
+    "George Jennings.",
     "Alexander Cumming.",
     "Thomas Twyford.",
     "Now I had a bigger problem.",
@@ -123,6 +124,7 @@ export const thomasCrapper: Story = {
     "Apparently...",
     "the seat had opinions.",
     "I have no notes.",
+    "...",
     "But that still wasn't the answer.",
     "Decades after Thomas died, a humor writer named Wallace Reyburn published a book about him called **Flushed with Pride**.",
     "Here's what made it dangerous.",
