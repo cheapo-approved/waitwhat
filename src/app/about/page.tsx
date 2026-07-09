@@ -4,45 +4,36 @@ export default function AboutPage() {
   return (
     <PageShell>
       <main className="mx-auto max-w-3xl px-5 py-14 sm:px-8 sm:py-20">
-        <p className="text-sm font-black uppercase tracking-[0.28em] text-gray-500">
-          About
-        </p>
-
-        <h1 className="mt-4 text-4xl font-black tracking-tight sm:text-6xl">
-          Why does Wait...What?! exist?
+        <h1 className="text-4xl font-black tracking-tight sm:text-6xl">
+          The world hasn't become less interesting.
         </h1>
 
         <div className="mt-8 space-y-6 text-xl leading-relaxed text-gray-800">
-          <p>
-            The world hasn't become less interesting.
-          </p>
-
           <p>
             We've just stopped looking.
           </p>
 
           <p>
-            Wait...What?! exists to help people rediscover wonder.
+            Wait...What?! is an independent publication dedicated to uncovering
+            true stories that surprise, entertain, and make you see the world a
+            little differently.
           </p>
 
           <p>
-            Every story begins with a question.
+            Every story is carefully researched and written because we genuinely
+            believe it's worth your time.
           </p>
 
           <p>
-            Every discovery ends with another.
+            No clickbait.
+            <br />
+            No conspiracy theories.
+            <br />
+            Just great stories.
           </p>
 
           <p>
-            We don't chase outrage.
-          </p>
-
-          <p>
-            We don't chase breaking news.
-          </p>
-
-          <p>
-            We chase the moments that make you stop...
+            We hope you'll discover something that makes you stop...
             <br />
             smile...
             <br />
@@ -54,11 +45,7 @@ export default function AboutPage() {
           </p>
 
           <p>
-            Welcome.
-          </p>
-
-          <p>
-            Let's go find something unbelievable.
+            Thanks for stopping by.
           </p>
         </div>
       </main>
