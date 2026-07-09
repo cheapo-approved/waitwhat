@@ -1,17 +1,53 @@
+import type { Metadata } from "next";
 import StoryCard from "@/components/StoryCard";
 import PageShell from "@/components/PageShell";
-import { getStory, getAllStories } from "@/lib/getStory";
+import { getAllStories } from "@/lib/getStory";
+
+const siteUrl = "https://waitwhat.media";
+
+const stories = getAllStories();
+const featured = stories.find((story) => story.featured) ?? stories[0];
+
+const imageUrl = featured.hero?.src
+  ? `${siteUrl}${featured.hero.src}`
+  : `${siteUrl}/brand/waitwhat-logo.png`;
+
+export const metadata: Metadata = {
+  title: featured.title,
+  description: featured.summary,
+  alternates: {
+    canonical: siteUrl,
+  },
+  openGraph: {
+    title: featured.title,
+    description: featured.summary,
+    url: siteUrl,
+    siteName: "Wait...What?!",
+    type: "website",
+    images: [
+      {
+        url: imageUrl,
+        width: 1200,
+        height: 675,
+        alt: featured.hero?.alt ?? featured.title,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: featured.title,
+    description: featured.summary,
+    images: [imageUrl],
+  },
+};
 
 export default function Home() {
-  const stories = getAllStories();
-  const featured = stories.find((story) => story.featured) ?? stories[0];
   const remaining = stories.filter((story) => story.slug !== featured.slug);
 
   return (
     <PageShell>
       <main>
         <div className="mx-auto max-w-5xl px-5 py-3 sm:px-8 sm:py-4">
-
           <section className="mt-3">
             <h2 className="text-lg font-bold uppercase tracking-[0.12em] text-gray-700">
               Featured Discovery
@@ -33,7 +69,6 @@ export default function Home() {
               ))}
             </div>
           </section>
-
         </div>
       </main>
     </PageShell>
