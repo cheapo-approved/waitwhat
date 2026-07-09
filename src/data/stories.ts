@@ -13,8 +13,10 @@ import { dymaxion } from "@/data/stories/dymaxion";
 import { donaldKendall } from "@/data/stories/donald-kendall";
 import { poyais } from "@/data/stories/poyais";
 import { thomasCrapper } from "@/data/stories/thomas-crapper";
+import { hitchbot } from "./stories/hitchbot";
 
 export const stories: Story[] = [
+  hitchbot,
   thomasCrapper,
   poyais,
   donaldKendall,

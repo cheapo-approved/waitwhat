@@ -5,7 +5,7 @@ export const thomasCrapper: Story = {
   title: "Why Do We All Know Thomas Crapper?",
   category: "Human Weirdness",
   readTime: "4 min read",
-  featured: true,
+  featured: false,
   summary:
     "A plumber became the butt of the joke. The real story is even better.",
 
