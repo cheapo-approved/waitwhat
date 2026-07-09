@@ -6,7 +6,7 @@ export const romanConcrete: Story = {
   category: "Lost Knowledge",
   readTime: "4 min read",
   featured: false,
-  summary: "The more we looked...the stranger it got.",
+  summary: "The longer it survived...the less sense it made.",
 
   hero: {
     src: "/images/roman-concrete/hero.png",

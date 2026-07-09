@@ -2,12 +2,12 @@ import type { Story } from "@/types/story";
 
 export const dymaxion: Story = {
   slug: "dymaxion",
-  title: "Chicago Came to See the Future",
+  title: "What Is That Thing?",
   category: "Forgotten Futures",
   readTime: "5 min read",
   featured: false,
   summary:
-    "Nobody expected it to show up looking like...that!",
+    "Chicago came to see the future. Nobody expected it to look like...that.",
 
   hero: {
     src: "/images/dymaxion/hero.png",

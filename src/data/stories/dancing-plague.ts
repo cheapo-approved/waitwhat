@@ -2,11 +2,11 @@ import type { Story } from "@/types/story";
 
 export const dancingPlague: Story = {
   slug: "dancing-plague",
-  title: "The Dancing Plague",
+  title: "The Second Dancer",
   category: "Human Weirdness",
   readTime: "4 min read",
   featured: false,
-  summary: "It started with one woman. Then an entire town had to figure out what to do.",
+  summary: "One woman dancing was strange. The second made it contagious.",
 
   hero: {
     src: "/images/dancing-plague/hero.png",

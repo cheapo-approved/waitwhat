@@ -2,12 +2,12 @@ import type { Story } from "@/types/story";
 
 export const acousticKitty: Story = {
   slug: "acoustic-kitty",
-  title: "Wanted: Independent Contractor",
+  title: "The CIA Thought Cats Could Spy",
   category: "Spies & Secrets",
   readTime: "5 min read",
   featured: false,
   summary:
-    "Cold War fears led to a solution that sounded too ridiculous to be true.",
+    "It sounds like satire. The Cold War called it a good idea.",
 
   hero: {
     src: "/images/acoustic-kitty/hero.png",

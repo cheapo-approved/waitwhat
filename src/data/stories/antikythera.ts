@@ -2,7 +2,7 @@ import type { Story } from "@/types/story";
 
 export const antikythera: Story = {
   slug: "antikythera-mechanism",
-  title: "Which One Would You Walk Past?",
+  title: "The One Everyone Overlooked",
   category: "Ancient Technology",
   readTime: "4 min read",
   featured: false,

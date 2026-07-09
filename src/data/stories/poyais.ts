@@ -2,12 +2,12 @@ import type { Story } from "@/types/story";
 
 export const poyais: Story = {
   slug: "poyais",
-  title: "A Place Called Poyais",
+  title: "Can I Have My Own Room?",
   category: "Hidden History",
   readTime: "8 min read",
   featured: false,
   summary:
-    "Before they crossed an ocean...they had already arrived.",
+    "Some dreams are worth leaving home for.",
 
   hero: {
     src: "/images/poyais/hero.png",

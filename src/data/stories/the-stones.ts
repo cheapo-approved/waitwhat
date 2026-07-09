@@ -1,8 +1,8 @@
 const story = {
   slug: "the-stones",
-  title: "The Island With Giant Stone Wheels",
+  title: "How Did These Get Here?",
   dek: "On a remote Pacific island, giant stone wheels sat in plain sight. No one moved them. No one guarded them. Yet everyone knew exactly who they belonged to.",
-  summary: "Nothing about them made sense.",
+  summary: "The answer only made them stranger.",
   readTime: "4 min read",
   featured: false,
   category: "History",

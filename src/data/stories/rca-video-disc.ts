@@ -2,12 +2,12 @@ import type { Story } from "@/types/story";
 
 export const rcaVideoDisc: Story = {
   slug: "rca-video-disc",
-  title: "One of the Biggest Bets on Record",
+  title: "What Am I Looking At?",
   category: "Forgotten Futures",
   readTime: "4 min read",
   featured: false,
   summary:
-    "History almost chose another path",
+    "It looked familiar...until it didn't.",
 
   hero: {
     src: "/images/rca-video-disc/hero.png",

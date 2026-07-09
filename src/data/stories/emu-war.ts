@@ -2,7 +2,7 @@ import type { Story } from "@/types/story";
 
 export const emuWar: Story = {
   slug: "emu-war",
-  title: "How Do You Stop an Invasion?",
+  title: "The Enemy Nobody Expected",
   category: "History",
   readTime: "6 min read",
   featured: false,
