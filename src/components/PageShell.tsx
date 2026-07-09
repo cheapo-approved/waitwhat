@@ -23,8 +23,8 @@ export default function PageShell({
               />
             </Link>
 
-            <p className="mt-1 text-[0.68rem] font-black uppercase leading-none tracking-[0.38em] text-gray-500 sm:text-sm">
-              Rediscover Wonder
+            <p className="mt-1 -ml-1 text-[0.68rem] font-black leading-none tracking-[0.38em] text-gray-500 sm:text-sm">
+              You ain't gonna believe this
             </p>
           </div>
 
