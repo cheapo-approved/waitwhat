@@ -17,21 +17,21 @@ export const gameline: Story = {
   images: [
     {
       src: "/images/gameline/1.jpg",
-      after: 59,
+      after: 58,
       alt: "GameLine Master Module cartridge for the Atari 2600",
       caption:
         "It looked like an Atari cartridge. It didn't think like one.",
     },
     {
       src: "/images/gameline/2.jpg",
-      after: 94,
+      after: 93,
       alt: "Vintage GameLine advertisement promising Atari games through a telephone",
       caption:
         "They weren't trying to reinvent Atari. They were trying to reinvent home.",
     },
     {
       src: "/images/gameline/3.jpg",
-      after: 113,
+      after: 112,
       alt: "GameLine documentation or advertisement showing the broader connected-home vision",
       caption:
         "Games were only the beginning. The bigger dream was a connected home before most homes were connected to anything.",
