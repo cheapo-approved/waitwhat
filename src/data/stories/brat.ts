@@ -1,7 +1,7 @@
 import type { Story } from "@/types/story";
 
 export const brat: Story = {
-  slug: "subaru-brat",
+  slug: "brat",
   title: "Seats in the Bed of a Pickup?",
   category: "Hidden Forces",
   readTime: "5 min read",

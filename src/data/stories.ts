@@ -19,7 +19,6 @@ import { brat } from "./stories/brat";
 export const stories: Story[] = [
   brat,
   hitchbot,
-  brat,
   thomasCrapper,
   poyais,
   donaldKendall,
