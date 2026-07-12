@@ -5,7 +5,7 @@ export const brat: Story = {
   title: "Seats in the Bed of a Pickup?",
   category: "Hidden Forces",
   readTime: "5 min read",
-  featured: true,
+  featured: false,
   summary:
     "There had to be a reason.",
 
