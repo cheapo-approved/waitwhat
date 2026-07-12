@@ -65,7 +65,7 @@ export const brat: Story = {
     "...because Europe got mad about American chickens.",
     "**Wait...What?!**",
     "---",
-    "Every good story starts with somebody who has a problem.",
+    "Every weird idea starts with a problem.",
     "In 1977, that somebody was Harvey Lamm, president of Subaru of America.",
     "Toyota had a small pickup.",
     "Datsun had one.",
