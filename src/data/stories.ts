@@ -14,9 +14,12 @@ import { donaldKendall } from "@/data/stories/donald-kendall";
 import { poyais } from "@/data/stories/poyais";
 import { thomasCrapper } from "@/data/stories/thomas-crapper";
 import { hitchbot } from "./stories/hitchbot";
+import { brat } from "./stories/brat";
 
 export const stories: Story[] = [
+  brat,
   hitchbot,
+  brat,
   thomasCrapper,
   poyais,
   donaldKendall,

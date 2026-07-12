@@ -5,7 +5,7 @@ export const hitchbot: Story = {
   title: "The Robot That Bet on Us",
   category: "Technology",
   readTime: "5 min read",
-  featured: true,
+  featured: false,
   summary:
     "Sometimes the strangest experiments tell us the most about ourselves.",
 
