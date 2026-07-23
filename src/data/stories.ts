@@ -16,8 +16,10 @@ import { thomasCrapper } from "@/data/stories/thomas-crapper";
 import { hitchbot } from "./stories/hitchbot";
 import { brat } from "./stories/brat";
 import { forrestFenn } from "./stories/forrest-fenn";
+import { brianRobson } from "./stories/brian-robson";
 
 export const stories: Story[] = [
+  brianRobson,
   forrestFenn,
   brat,
   hitchbot,

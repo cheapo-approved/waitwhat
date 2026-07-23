@@ -5,7 +5,7 @@ export const forrestFenn: Story = {
   title: "The Man Who Hid a Treasure",
   category: "Hidden Forces",
   readTime: "6 min read",
-  featured: true,
+  featured: false,
   summary:
     "Everyone knows how it ended. Almost nobody knows how it began.",
 
