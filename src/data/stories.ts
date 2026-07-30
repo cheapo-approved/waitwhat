@@ -17,8 +17,10 @@ import { hitchbot } from "./stories/hitchbot";
 import { brat } from "./stories/brat";
 import { forrestFenn } from "./stories/forrest-fenn";
 import { brianRobson } from "./stories/brian-robson";
+import { charlesVanceMillar } from "./stories/charles-vance-millar";
 
 export const stories: Story[] = [
+  charlesVanceMillar,
   brianRobson,
   forrestFenn,
   brat,

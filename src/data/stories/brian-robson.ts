@@ -5,7 +5,7 @@ export const brianRobson: Story = {
   title: "No Ticket Home",
   category: "Hidden Forces",
   readTime: "6 min read",
-  featured: true,
+  featured: false,
   summary:
     "Australia sounded like freedom. Getting home was another story.",
   hero: {
