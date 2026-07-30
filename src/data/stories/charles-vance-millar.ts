@@ -31,7 +31,7 @@ export const charlesVanceMillar: Story = {
     },
     {
       src: "/images/charles-vance-millar/3.jpg",
-      after: 134,
+      after: 135,
       alt: "The four mothers who shared Charles Vance Millar's estate after the Great Stork Derby",
       caption:
         "Ten years later, the headlines faded. The families still had children to raise.",
