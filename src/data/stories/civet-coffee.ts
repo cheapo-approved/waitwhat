@@ -34,7 +34,7 @@ export const civetCoffee: Story = {
       after: 148,
       alt: "Tom, Cherie, JJ, and Kai sharing a civet coffee experience in Saigon",
       caption:
-        "A bucket-list cup of coffee became one of our favorite memories from Vietnam.",
+        "Two centuries after one forgotten moment in Java, its ripple reached our table in Saigon.",
     },
   ],
   body: [
