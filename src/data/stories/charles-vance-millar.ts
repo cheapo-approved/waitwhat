@@ -5,7 +5,7 @@ export const charlesVanceMillar: Story = {
   title: "Who Writes a Will Like This?",
   category: "Hidden Forces",
   readTime: "4 min read",
-  featured: true,
+  featured: false,
   summary:
     "Charles Vance Millar had one last experiment in mind.",
   hero: {
