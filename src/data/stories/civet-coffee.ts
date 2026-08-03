@@ -17,21 +17,21 @@ export const civetCoffee: Story = {
   images: [
     {
       src: "/images/civet-coffee/1.jpg",
-      after: 55,
+      after: 56,
       alt: "Coffee workers harvesting ripe cherries on a hillside plantation in Java",
       caption:
         "Every basket held something valuable. For the people harvesting it, that value usually belonged to someone else.",
     },
     {
       src: "/images/civet-coffee/2.jpg",
-      after: 88,
+      after: 89,
       alt: "An Asian palm civet near ripe coffee cherries",
       caption:
         "The civets never meant to improve coffee. They were simply looking for the ripest cherries.",
     },
     {
       src: "/images/civet-coffee/3.jpg",
-      after: 148,
+      after: 154,
       alt: "Tom, Cherie, JJ, and Kai sharing a civet coffee experience in Saigon",
       caption:
         "Two centuries after one forgotten moment in Java, its ripple reached our table in Saigon.",
@@ -53,6 +53,7 @@ export const civetCoffee: Story = {
     "The menu landed on the table.",
     "Weasel Coffee.",
     "150,000 đồng.",
+    "About ten times the price of typical Vietnamese street coffee.",
     "One of the world's most expensive coffees.",
     "I didn't even glance at anything else.",
     "The waiter placed a traditional Vietnamese phin over my glass.",
