@@ -9,21 +9,21 @@ export default function PageShell({
 }) {
   return (
     <div className="min-h-screen bg-white">
-      <header className="border-b border-gray-200 bg-gradient-to-b from-gray-50 to-white">
-        <div className="mx-auto flex max-w-6xl items-end justify-between px-5 pt-6 pb-5 sm:px-8 sm:pt-7 sm:pb-6">
+      <header className="border-b border-gray-200 bg-white pt-[env(safe-area-inset-top)]">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-8 sm:py-5">
           <div>
-            <Link href="/" className="-ml-4 block sm:-ml-5">
+            <Link href="/" className="-ml-2 block">
               <Image
                 src="/brand/waitwhat-logo.png"
                 alt="WAIT...WHAT?!"
                 width={1000}
                 height={243}
                 priority
-                className="h-auto w-[310px] sm:w-[470px] md:w-[590px]"
+                className="h-auto w-[240px] sm:w-[340px] md:w-[400px]"
               />
             </Link>
 
-            <p className="mt-1 -ml-1 text-[0.68rem] font-black leading-none tracking-[0.38em] text-gray-500 sm:text-sm">
+            <p className="mt-1 text-[0.58rem] font-black leading-none tracking-[0.34em] text-gray-500 sm:text-xs">
               You ain't gonna believe this
             </p>
           </div>
