@@ -5,7 +5,7 @@ export const civetCoffee: Story = {
   title: "The Coffee Nobody Was Supposed to Drink",
   category: "Hidden Forces",
   readTime: "5 min read",
-  featured: true,
+  featured: false,
   summary:
     "One forgotten decision transformed a plantation survival story into one of the world's greatest luxuries.",
   hero: {

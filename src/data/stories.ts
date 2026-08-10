@@ -19,8 +19,10 @@ import { forrestFenn } from "./stories/forrest-fenn";
 import { brianRobson } from "./stories/brian-robson";
 import { charlesVanceMillar } from "./stories/charles-vance-millar";
 import { civetCoffee } from "./stories/civet-coffee";
+import { candyBomber } from "./stories/candy-bomber";
 
 export const stories: Story[] = [
+  candyBomber,
   civetCoffee,
   charlesVanceMillar,
   brianRobson,
