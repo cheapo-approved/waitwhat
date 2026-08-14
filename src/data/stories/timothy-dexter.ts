@@ -27,7 +27,7 @@ export const timothyDexter: Story = {
     {
       src: "/images/timothy-dexter/2.jpg",
       after: 108,
-      alt: "A page from Timothy Dexter's book showing mainly puncuations"
+      alt: "A page from Timothy Dexter's book showing mainly punctuations",
       caption:
         "His answer to the critics may have been the greatest act of pettiness in publishing history.",
     },
