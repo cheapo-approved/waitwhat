@@ -3,9 +3,9 @@ import type { Story } from "@/types/story";
 export const candyBomber: Story = {
   slug: "candy-bomber",
   title: "Why Did Berlin’s Children Run Toward the Planes?",
-  category: "Hidden Forces",
+  category: "Human Spirit",
   readTime: "6 min read",
-  featured: true,
+  featured: false,
   summary:
     "Every pound aboard the Berlin Airlift mattered. Then one pilot made room for something nobody needed.",
   hero: {

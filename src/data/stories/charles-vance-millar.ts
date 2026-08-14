@@ -3,7 +3,7 @@ import type { Story } from "@/types/story";
 export const charlesVanceMillar: Story = {
   slug: "charles-vance-millar",
   title: "Who Writes a Will Like This?",
-  category: "Hidden Forces",
+  category: "Human Nature",
   readTime: "4 min read",
   featured: false,
   summary:

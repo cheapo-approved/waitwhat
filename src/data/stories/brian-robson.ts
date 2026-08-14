@@ -3,7 +3,7 @@ import type { Story } from "@/types/story";
 export const brianRobson: Story = {
   slug: "brian-robson",
   title: "No Ticket Home",
-  category: "Hidden Forces",
+  category: "Human Spirit",
   readTime: "6 min read",
   featured: false,
   summary:

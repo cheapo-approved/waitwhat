@@ -3,7 +3,7 @@ import type { Story } from "@/types/story";
 export const forrestFenn: Story = {
   slug: "forrest-fenn",
   title: "The Man Who Hid a Treasure",
-  category: "Hidden Forces",
+  category: "Human Nature",
   readTime: "6 min read",
   featured: false,
   summary:

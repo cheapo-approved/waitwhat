@@ -3,7 +3,7 @@ import type { Story } from "@/types/story";
 export const civetCoffee: Story = {
   slug: "civet-coffee",
   title: "The Coffee Nobody Was Supposed to Drink",
-  category: "Hidden Forces",
+  category: "Hidden History",
   readTime: "5 min read",
   featured: false,
   summary:
