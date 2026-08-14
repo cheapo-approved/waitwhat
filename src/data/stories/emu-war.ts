@@ -27,14 +27,14 @@ export const emuWar: Story = {
     {
       src: "/images/emu-war/2.jpg",
       after: 54,
-      alt: "A large emu standing in an open wheat field",
+      alt: "A farmer handling a large emu in an open wheat field",
       caption:
         "The invaders weren't what anyone expected.",
     },
     {
       src: "/images/emu-war/3.jpg",
       after: 97,
-      alt: "Australian soldiers with a truck-mounted machine gun in rugged terrain",
+      alt: "Australian soldiers with a large machine gun in rugged terrain",
       caption:
         "Technology wasn't the problem. Expectations were.",
     },

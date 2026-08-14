@@ -11,7 +11,7 @@ export const donaldKendall: Story = {
 
   hero: {
     src: "/images/donald-kendall/hero.png",
-    alt: "A cinematic Cold War era businessman overlooking Moscow with a Pepsi bottle in hand",
+    alt: "A cinematic Cold War era businessman overlooking Moscow with Nixon and Khrushchev holding Pepsis",
     caption:
       "Sometimes the biggest discoveries begin with the strangest questions.",
   },
@@ -27,7 +27,7 @@ export const donaldKendall: Story = {
     {
       src: "/images/donald-kendall/2.jpg",
       after: 50,
-      alt: "A 1970s Pepsi boardroom discussing expansion beyond soft drinks",
+      alt: "A Pepsi ribbon cutting ceremony celebrating expansion beyond soft drinks",
       caption:
         "Every new company answered the same question: \"What else we got?\"",
     },

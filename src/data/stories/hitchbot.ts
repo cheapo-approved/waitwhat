@@ -11,7 +11,7 @@ export const hitchbot: Story = {
 
   hero: {
     src: "/images/hitchbot/hero.png",
-    alt: "HitchBOT standing on the side of a highway with its thumb out",
+    alt: "HitchBOT getting into a car on the side of a highway",
     caption:
       "The researchers wanted to know if robots could trust humans.",
   },
@@ -19,21 +19,21 @@ export const hitchbot: Story = {
   images: [    {
       src: "/images/hitchbot/1.jpg",
       after: 29,
-      alt: "GameLine Master Module cartridge for the Atari 2600",
+      alt: "HitchBOT sitting on the side of the road with its thumb out",
       caption:
         "Meet HitchBOT. I still can't believe hundreds of people looked at this little fella and thought, 'Sure...hop in.'",
     },
     {
       src: "/images/hitchbot/2.jpg",
       after: 75,
-      alt: "Vintage GameLine advertisement promising Atari games through a telephone",
+      alt: "HitchBOT shown in parts and pieces on the pavement",
       caption:
         "One family. One wedding. One road trip. One tiny act of kindness at a time, the experiment kept proving the same thing.",
     },
     {
       src: "/images/hitchbot/3.jpg",
       after: 60,
-      alt: "GameLine documentation or advertisement showing the broader connected-home vision",
+      alt: "A collage of HitchBOT in various locations during its journey",
       caption:
         "Everybody remembers where the journey ended. We almost forgot everywhere it lived.",
     },

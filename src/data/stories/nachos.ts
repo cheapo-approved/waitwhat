@@ -11,7 +11,7 @@ export const nachos: Story = {
 
   hero: {
     src: "/images/nachos/hero.png",
-    alt: "A shared plate of nachos covered with melted cheese and jalapeños",
+    alt: "A man preparing food in the kitchen as he listens to the patrons in the next room",
     caption:
       "You’ve probably said his name a hundred times without knowing there was a person behind it.",
   },
@@ -20,7 +20,7 @@ export const nachos: Story = {
     {
       src: "/images/nachos/1.jpg",
       after: 24,
-      alt: "Ignacio Nacho Anaya, the Mexican restaurateur who created nachos",
+      alt: "Ignacio Nacho Anaya, the Mexican restaurateur",
       caption:
         "Before Nacho became something people ordered, he was Ignacio Anaya—a husband, father, and restaurant worker in Piedras Negras, Mexico.",
     },

@@ -20,14 +20,14 @@ export const timothyDexter: Story = {
     {
       src: "/images/timothy-dexter/1.jpg",
       after: 24,
-      alt: "An old view of Newburyport, Massachusetts with ships and merchants near the harbor",
+      alt: "An old drawing of Timothy Dexter",
       caption:
         "Everyone thought they had Timothy Dexter figured out.",
     },
     {
       src: "/images/timothy-dexter/2.jpg",
       after: 108,
-      alt: "An antique bed warmer with a long wooden handle and metal pan",
+      alt: "A page from Timothy Dexter's book showing mainly puncuations"
       caption:
         "His answer to the critics may have been the greatest act of pettiness in publishing history.",
     },

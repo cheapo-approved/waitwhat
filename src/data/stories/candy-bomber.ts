@@ -10,7 +10,7 @@ export const candyBomber: Story = {
     "Every pound aboard the Berlin Airlift mattered. Then one pilot made room for something nobody needed.",
   hero: {
     src: "/images/candy-bomber/hero.png",
-    alt: "A Berlin child watching tiny candy parachutes fall from an American airplane",
+    alt: "Berlin children running toward an American airplane",
     caption:
       "Three years after American planes had dropped bombs on Berlin, one returned carrying something no one needed to survive.",
   },

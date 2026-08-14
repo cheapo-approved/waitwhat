@@ -11,7 +11,7 @@ export const forrestFenn: Story = {
 
   hero: {
     src: "/images/forrest-fenn/hero.png",
-    alt: "Forrest Fenn standing in the Rocky Mountains beside a bronze treasure chest",
+    alt: "Forrest Fenn sitting in the Rocky Mountains beside a bronze treasure chest",
     caption:
       "Most people know where the story ended. Almost nobody knows why it began.",
   },
@@ -27,7 +27,7 @@ export const forrestFenn: Story = {
     {
       src: "/images/forrest-fenn/2.jpg",
       after: 185,
-      alt: "Treasure hunters hiking through the Rocky Mountains while searching for Forrest Fenn's chest",
+      alt: "Forrest Fenn going through the contents of his chest",
       caption:
         "One last look.",
     },

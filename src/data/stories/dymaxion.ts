@@ -26,14 +26,14 @@ export const dymaxion: Story = {
     {
       src: "/images/dymaxion/2.jpg",
       after: 103,
-      alt: "Perfect payoff after explaining rear-wheel steering, Ford V8, and aircraft thinking.",
+      alt: "A sideview of a remodeled Dymaxion",
       caption:
         "Once you see how it was built... the shape starts making sense.",
     },
     {
       src: "/images/dymaxion/3.jpg",
       after: 123,
-      alt: "Makes readers connect with Fuller, the inventor instead of just the machine.",
+      alt: "A portrait of Buckminster Fuller, the inventor",
       caption:
         "The strangest thing here wasn't the car.",
       

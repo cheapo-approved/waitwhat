@@ -11,7 +11,7 @@ export const acousticKitty: Story = {
 
   hero: {
     src: "/images/acoustic-kitty/hero.png",
-    alt: "A cinematic 1960s Cold War scene with a mysterious cat walking toward two men on a park bench",
+    alt: "A cinematic 1960s Cold War scene with a mysterious cat walking away from two men on a park bench",
     caption: "Sometimes the strangest ideas are the ones that actually happened.",
   },
 
@@ -19,21 +19,21 @@ export const acousticKitty: Story = {
     {
       src: "/images/acoustic-kitty/1.jpg",
       after: 35,
-      alt: "A tense Cold War era command room with maps and intelligence officers",
+      alt: "A tense Cold War era scene with trucks transporting missiles",
       caption:
         "Sometimes the most dangerous weapon was information.",
     },
     {
       src: "/images/acoustic-kitty/2.jpg",
       after: 57,
-      alt: "A curious cat sitting calmly beside miniature electronic components",
+      alt: "A group of people heading down into an underground bomb shelter",
       caption:
         "Someone actually signed off on this.",
     },
     {
       src: "/images/acoustic-kitty/3.jpg",
       after: 80,
-      alt: "A quiet park bench in the early 1960s",
+      alt: "The actual CIA document detailing the Acoustic Kitty project",
       caption:
         "Even the ending has an asterisk.",
     },

@@ -34,7 +34,7 @@ export const brat: Story = {
     {
       src: "/images/brat/3.jpg",
       after: 119,
-      alt: "People riding in the rear jump seats of a Subaru BRAT",
+      alt: "Kids riding in the rear jump seats of a Subaru BRAT",
       caption:
         "Nobody remembers the tariff. Everybody remembers the ride.",
     },
@@ -50,7 +50,7 @@ export const brat: Story = {
     "Not a toolbox.",
     "Not more cargo space.",
     "Two rear-facing plastic seats.",
-    "With seat belts.",
+    "With seat belts...and handlebars!",
     "---",
     "If you're anything like me...",
     "your brain immediately starts asking all the important questions.",

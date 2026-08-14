@@ -30,7 +30,7 @@ export const romanConcrete: Story = {
     {
       src: "/images/roman-concrete/3.jpg",
       after: 97,
-      alt: "Weathered ancient Roman concrete still standing after centuries",
+      alt: "Grand image of ancient Roman concrete still standing after centuries",
       caption: "Sometimes the thing that looks wrong... is exactly what makes it last.",
     },
   ],

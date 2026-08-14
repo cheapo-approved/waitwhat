@@ -10,7 +10,7 @@ export const civetCoffee: Story = {
     "One forgotten decision transformed a plantation survival story into one of the world's greatest luxuries.",
   hero: {
     src: "/images/civet-coffee/hero.png",
-    alt: "A civet moving through a moonlit coffee plantation filled with ripe red coffee cherries",
+    alt: "A farmer sifting through ripe red coffee cherries with a civet moving through a coffee plantation",
     caption:
       "Before it became a luxury, civet coffee began with a question no one thought to record.",
   },

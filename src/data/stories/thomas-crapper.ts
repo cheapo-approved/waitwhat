@@ -11,7 +11,7 @@ export const thomasCrapper: Story = {
 
   hero: {
     src: "/images/thomas-crapper/hero.png",
-    alt: "A cinematic Victorian bathroom showroom with polished brass fixtures and a proud shop sign reading Thomas Crapper and Co",
+    alt: "A cinematic Victorian bathroom showroom with polished brass fixtures and a proud shop owner",
     caption: "Some names refuse to stay behind the walls.",
   },
 
@@ -19,14 +19,14 @@ export const thomasCrapper: Story = {
     {
       src: "/images/thomas-crapper/1.jpg",
       after: 25,
-      alt: "A Victorian London street near the River Thames during the era of early sanitation reform",
+      alt: "Portrait of Thomas Crapper",
       caption:
         "Meet the man behind the myth. Turns out, he was a lot more interesting than the joke.",
     },
     {
       src: "/images/thomas-crapper/2.jpg",
       after: 75,
-      alt: "A vintage bathroom showroom displaying toilets sinks and brass fixtures",
+      alt: "A vintage advertisement displaying toilets sinks and brass fixtures",
       caption:
         "Thomas Crapper didn't invent the toilet - but he built a business that proudly put his name on quality plumbing.",
     },

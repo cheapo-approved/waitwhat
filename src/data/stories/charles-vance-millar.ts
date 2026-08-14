@@ -10,7 +10,7 @@ export const charlesVanceMillar: Story = {
     "Charles Vance Millar had one last experiment in mind.",
   hero: {
     src: "/images/charles-vance-millar/hero.png",
-    alt: "Charles Vance Millar seated beside the will that launched the Great Stork Derby",
+    alt: "Charles Vance Millar standing with a backdrop of Toronto and a courtroom.",
     caption:
       "Charles Vance Millar left Toronto one final experiment.",
   },
@@ -18,21 +18,21 @@ export const charlesVanceMillar: Story = {
     {
       src: "/images/charles-vance-millar/1.jpg",
       after: 37,
-      alt: "Charles Vance Millar, the Toronto lawyer whose will created the Great Stork Derby",
+      alt: "Charles Vance Millar receiving a trophy for one of his derby wins",
       caption:
         "Charles Vance Millar left behind almost no personal writings. His unusual will became the clearest window into the man himself.",
     },
     {
       src: "/images/charles-vance-millar/2.jpg",
       after: 81,
-      alt: "Toronto mothers and children during the Great Depression",
+      alt: "Kathleen Nagle and her husband and children during the Great Depression",
       caption:
         "Kathleen Nagle and her family during the Great Depression. She never set out to become famous—she was simply trying to raise her children.",
     },
     {
       src: "/images/charles-vance-millar/3.jpg",
       after: 135,
-      alt: "The four mothers who shared Charles Vance Millar's estate after the Great Stork Derby",
+      alt: "Three of the four mothers and their husbands who shared Charles Vance Millar's estate after the Great Stork Derby",
       caption:
         "Ten years later, the headlines faded. The families still had children to raise.",
     },

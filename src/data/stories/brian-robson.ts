@@ -10,7 +10,7 @@ export const brianRobson: Story = {
     "Australia sounded like freedom. Getting home was another story.",
   hero: {
     src: "/images/brian-robson/hero.png",
-    alt: "Brian Robson inside a wooden shipping crate bound for home",
+    alt: "Brian Robson standing by a wooden shipping crate bound for home",
     caption:
       "Most people buy a ticket home. Brian shipped himself.",
   },
@@ -18,21 +18,21 @@ export const brianRobson: Story = {
     {
       src: "/images/brian-robson/1.jpg",
       after: 234,
-      alt: "Forrest Fenn holding the bronze treasure chest he later hid in the Rocky Mountains",
+      alt: "Brian Robson sitting and posing next to his packed luggage",
       caption:
         "Brian Robson left Wales looking forward, not back.",
     },
     {
       src: "/images/brian-robson/2.jpg",
       after: 303,
-      alt: "Brian Robson standing in front of a wooden shipping crate",
+      alt: "Brian Robson sitting inside of his wooden shipping crate",
       caption:
         "Most people saw a wooden box. Brian saw a ticket home.",
     },
     {
       src: "/images/brian-robson/3.jpg",
       after: 474,
-      alt: "The recovered Forrest Fenn treasure chest and its contents",
+      alt: "Brian Robson being lead out of the building where he was examined",
       caption:
         "Home was still thousands of miles away...but at least he was alive.",
     },

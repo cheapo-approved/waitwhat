@@ -26,14 +26,14 @@ export const explodingWhale: Story = {
     {
       src: "/images/exploding-whale/2.jpg",
       after: 66,
-      alt: "A beach explosion sending debris into the air",
+      alt: "A beached whale next to a Volkswagen Beetle to show the size difference",
       caption:
         "The plan was simple. The result was not.",
     },
     {
       src: "/images/exploding-whale/3.jpg",
       after: 78,
-      alt: "A vintage television news crew filming on a beach",
+      alt: "A vintage television news reporter filming on a beach",
       caption:
         "Fortunately for history, the cameras were rolling.",
     },

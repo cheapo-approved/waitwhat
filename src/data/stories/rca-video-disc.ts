@@ -11,7 +11,7 @@ export const rcaVideoDisc: Story = {
 
   hero: {
     src: "/images/rca-video-disc/hero.png",
-    alt: "RCA SelectaVision video disc player with a movie disc in a plastic caddy",
+    alt: "Records and a vintage CRT television",
     caption:
       "RCA believed this was the future of home entertainment.",
   },
@@ -20,21 +20,21 @@ export const rcaVideoDisc: Story = {
     {
       src: "/images/rca-video-disc/1.jpg",
       after: 44,
-      alt: "RCA SelectaVision King Kong CED movie disc in its plastic caddy",
+      alt: "RCA SelectaVision disc in its plastic caddy",
       caption:
         "At first glance, it looked like something from the record bin.",
     },
     {
       src: "/images/rca-video-disc/2.jpg",
       after: 63,
-      alt: "RCA SelectaVision player connected to a television",
+      alt: "An ad for the RCA SelectaVision player connected to a television",
       caption:
         "No laser. No tape. Just a needle reading a movie.",
     },
     {
       src: "/images/rca-video-disc/3.jpg",
       after: 86,
-      alt: "A shelf of RCA SelectaVision CED movie discs",
+      alt: "Another ad of the RCA SelectaVision showing a family enjoying a movie",
       caption:
         "For a brief moment, this was a real branch of the future.",
     },

@@ -20,21 +20,21 @@ export const poyais: Story = {
     {
       src: "/images/poyais/1.jpg",
       after: 49,
-      alt: "Gregor MacGregor presenting an elegant map and guidebook of Poyais to hopeful Scottish families",
+      alt: "Gregor MacGregor portrait as a decorated war hero",
       caption:
         "Some opportunities are impossible to ignore.",
     },
     {
       src: "/images/poyais/2.jpg",
       after: 62,
-      alt: "Families boarding the Kennersley Castle in Scotland with trunks and children in 1822",
+      alt: "Map of Poyais",
       caption:
         "Sometimes the hardest part is imagining a better life.",
     },
     {
       src: "/images/poyais/3.jpg",
       after: 94,
-      alt: "Settlers standing on a tropical shoreline staring into untouched jungle where a capital city was supposed to be",
+      alt: "An actual copy of the Poyais land certificate",
       caption:
         "A promise you can finally keep.",
     },
