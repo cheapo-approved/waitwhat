@@ -10,7 +10,7 @@ export const emuWar: Story = {
     "Some battles begin long before you know what you're fighting.",
 
   hero: {
-    src: "/images/emu-war/hero.png",
+    src: "/images/emu-war/hero2.png",
     alt: "Australian wheat fields under a dramatic sky with unseen danger approaching",
     caption:
       "Sometimes the hardest battles begin before you even know the enemy.",
