@@ -5,7 +5,7 @@ export const nachos: Story = {
   title: "Everyone Started Asking for Nacho",
   category: "Hidden History",
   readTime: "5 min read",
-  featured: true,
+  featured: false,
   summary:
     "Four women wanted something different. He had no idea what he was going to make.",
 
