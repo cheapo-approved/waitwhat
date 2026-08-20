@@ -34,7 +34,7 @@ export const snoopDoggBowl: Story = {
     {
       src: "/images/snoop-dogg-bowl/3.jpg",
       after: 84,
-      alt: "Miami of Ohio players celebrating with a Tuscon youth during the NIL clinic",
+      alt: "Miami of Ohio players celebrating with a Tucson youth during the NIL clinic",
       caption:
         "A Tucson kid celebrates with Miami (Ohio) players during the bowl’s NIL youth clinic.",
     },
@@ -74,7 +74,7 @@ export const snoopDoggBowl: Story = {
     "Apparently…",
     "the data was correct.",
     "But when he announced the bowl, Snoop said college football needed to get back to…",
-    "> “the colleges, the players and the competition, the community, the fan experience and the pageantry.”",
+    "“the colleges, the players and the competition, the community, the fan experience and the pageantry.”",
     "Before Snoop bought his way into college football…",
     "football had already spent twenty years changing Calvin Broadus.",
     "It began with his sons.",
@@ -110,7 +110,7 @@ export const snoopDoggBowl: Story = {
     "He has won none.",
     "But when somebody asked him about that…",
     "Snoop kept a different score.",
-    "> “I got 40-something kids in the NFL. I won it all.”",
+    "“I got 40-something kids in the NFL. I won it all.”",
     "Years before Gin & Juice existed, Snoop showed an interviewer a photograph of players from his league committing to Division I schools.",
     "He called it his Grammy.",
     "That was the man who arrived in Tucson.",
