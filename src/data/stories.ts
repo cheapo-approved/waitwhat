@@ -22,8 +22,10 @@ import { civetCoffee } from "./stories/civet-coffee";
 import { candyBomber } from "./stories/candy-bomber";
 import { nachos } from "./stories/nachos";
 import { sergioMendes } from "./stories/sergio-mendes";
+import { snoopDoggBowl } from "./stories/snoop-dogg-bowl";
 
 export const stories: Story[] = [
+  snoopDoggBowl,
   sergioMendes,
   nachos,
   candyBomber,

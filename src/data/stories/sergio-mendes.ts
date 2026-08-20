@@ -5,7 +5,7 @@ export const sergioMendes: Story = {
   title: "The Sergio Mendes Headlock",
   category: "Hidden History",
   readTime: "5 min read",
-  featured: true,
+  featured: false,
   summary:
     "A love song, an extremely patient wife, and the largest name on the record.",
 
