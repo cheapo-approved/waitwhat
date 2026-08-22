@@ -1,12 +1,16 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { cookies } from "next/headers";
+import { notFound } from "next/navigation";
+
 import PageShell from "@/components/PageShell";
 import VoteButtons from "@/components/VoteButtons";
 import ShareButtons from "@/components/ShareButtons";
+import EmailSignup from "@/components/EmailSignup";
+
 import { getAllStories, getStory } from "@/lib/getStory";
 import { getVoteCounts, getUserVote } from "@/lib/votes";
-import { notFound } from "next/navigation";
+
 import type { StoryImage as StoryImageType } from "@/types/story";
 
 const siteUrl = "https://waitwhat.media";
@@ -32,7 +36,9 @@ export async function generateMetadata({
   return {
     title: story.title,
     description: story.summary,
-    alternates: { canonical: storyUrl },
+    alternates: {
+      canonical: storyUrl,
+    },
     openGraph: {
       title: story.title,
       description: story.summary,
@@ -80,6 +86,7 @@ function StoryImageBlock({
 }) {
   const imageKind = image.kind;
   const label = imageKind ? imageKindLabels[imageKind] : undefined;
+
   const labelStyle = imageKind
     ? imageKindStyles[imageKind] ?? "text-stone-500"
     : "text-stone-500";
@@ -158,7 +165,10 @@ export default async function StoryPage({
       ? otherStories[Math.floor(Math.random() * otherStories.length)]
       : undefined;
 
-  const imagesByIndex = new Map<number, StoryImageType & { kind?: string }>();
+  const imagesByIndex = new Map<
+    number,
+    StoryImageType & { kind?: string }
+  >();
 
   for (const image of story.images ?? []) {
     if (typeof image.after === "number") {
@@ -261,6 +271,10 @@ export default async function StoryPage({
                 counts={counts}
                 userVote={userVote}
               />
+            </section>
+
+            <section className="mt-8">
+              <EmailSignup />
             </section>
 
             <section className="mt-4 border-t border-stone-200 pt-4">

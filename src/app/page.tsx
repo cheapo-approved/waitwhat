@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import StoryCard from "@/components/StoryCard";
 import PageShell from "@/components/PageShell";
+import EmailSignup from "@/components/EmailSignup";
 import { getAllStories } from "@/lib/getStory";
 
 const siteUrl = "https://waitwhat.media";
@@ -56,6 +57,10 @@ export default function Home() {
             <div className="mt-3">
               <StoryCard story={featured} featured />
             </div>
+          </section>
+
+          <section className="mt-8">
+            <EmailSignup />
           </section>
 
           <section className="mt-8">
