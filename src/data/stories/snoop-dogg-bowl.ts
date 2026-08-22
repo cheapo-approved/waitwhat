@@ -5,7 +5,7 @@ export const snoopDoggBowl: Story = {
   title: "The Snoop Dogg Bowl",
   category: "Hidden Forces",
   readTime: "6 min read",
-  featured: true,
+  featured: false,
   summary:
     "A canned cocktail, a black lowrider, and the strangest field in college football.",
 

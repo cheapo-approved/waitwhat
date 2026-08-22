@@ -28,7 +28,7 @@ import { superSoaker } from "./stories/super-soaker";
 
 export const stories: Story[] = [
 //  superSoaker,
-//  johnRenehan,
+  johnRenehan,
   snoopDoggBowl,
   sergioMendes,
   nachos,
