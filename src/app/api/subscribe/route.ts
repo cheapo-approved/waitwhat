@@ -98,8 +98,7 @@ export async function POST(request: Request) {
                 font-size: 15px;
                 line-height: 1.6;
               ">
-                Tom<br />
-                Wait...What?!
+                Tom
               </p>
             </div>
           </body>
