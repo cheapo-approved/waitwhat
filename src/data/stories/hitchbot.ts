@@ -18,21 +18,21 @@ export const hitchbot: Story = {
 
   images: [    {
       src: "/images/hitchbot/1.jpg",
-      after: 29,
+      after: 30,
       alt: "HitchBOT sitting on the side of the road with its thumb out",
       caption:
         "Meet HitchBOT. I still can't believe hundreds of people looked at this little fella and thought, 'Sure...hop in.'",
     },
     {
       src: "/images/hitchbot/2.jpg",
-      after: 75,
+      after: 79,
       alt: "HitchBOT shown in parts and pieces on the pavement",
       caption:
         "One family. One wedding. One road trip. One tiny act of kindness at a time, the experiment kept proving the same thing.",
     },
     {
       src: "/images/hitchbot/3.jpg",
-      after: 60,
+      after: 64,
       alt: "A collage of HitchBOT in various locations during its journey",
       caption:
         "Everybody remembers where the journey ended. We almost forgot everywhere it lived.",
@@ -57,6 +57,7 @@ export const hitchbot: Story = {
     "I'd never thought about it that way.",
     "So naturally...",
     "I clicked.",
+    "---",
     "The experiment sounded almost too simple.",
     "Build a robot.",
     "Stick out its thumb.",
@@ -70,6 +71,7 @@ export const hitchbot: Story = {
     "The robot wasn't walking anywhere with them pool noodle legs.",
     "Somebody bought those anyway.",
     "I already liked whoever made that decision.",
+    "---",
     "The experiment worked.",
     "Canada said yes.",
     "Nineteen rides.",
@@ -79,6 +81,7 @@ export const hitchbot: Story = {
     "Then Germany said yes.",
     "Then the Netherlands.",
     "It just kept working.",
+    "---",
     "Then...",
     "America got its turn.",
     "Boston.",
@@ -99,6 +102,7 @@ export const hitchbot: Story = {
     "HitchBOT had been found in Philadelphia.",
     "The journey was over.",
     "I just sat there for a minute.",
+    "---",
     "Every article wanted to tell me how HitchBOT died.",
     "I wanted to know how HitchBOT lived.",
     "So I kept digging.",
@@ -116,6 +120,7 @@ export const hitchbot: Story = {
     "None of these people knew they were helping prove a robotics experiment.",
     "They thought they were giving a funny-looking robot a ride.",
     "They had no idea they were becoming the evidence.",
+    "---",
     "Maybe my relationship with robots has never really been about trust.",
     "HitchBOT never asked me to give up anything.",
     "The little fella just wanted a ride.",
@@ -126,6 +131,7 @@ export const hitchbot: Story = {
     "**ChatGPT?** Doesn't sleep. Doesn't blink. Lives in data centers the size of Costco. What exactly is going on over there?",
     "Somewhere along the way, our robots stopped asking for rides and started asking for the keys.",
     "HitchBOT never did.",
+    "---",
     "I clicked on HitchBOT because I thought I was reading a story about a robot.",
     "Turns out...",
     "It was a story about people all along.",

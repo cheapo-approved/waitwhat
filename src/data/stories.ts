@@ -23,8 +23,12 @@ import { candyBomber } from "./stories/candy-bomber";
 import { nachos } from "./stories/nachos";
 import { sergioMendes } from "./stories/sergio-mendes";
 import { snoopDoggBowl } from "./stories/snoop-dogg-bowl";
+import { johnRenehan } from "./stories/john-renehan";
+import { superSoaker } from "./stories/super-soaker";
 
 export const stories: Story[] = [
+//  superSoaker,
+//  johnRenehan,
   snoopDoggBowl,
   sergioMendes,
   nachos,
