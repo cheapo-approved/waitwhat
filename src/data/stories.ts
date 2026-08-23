@@ -25,8 +25,10 @@ import { sergioMendes } from "./stories/sergio-mendes";
 import { snoopDoggBowl } from "./stories/snoop-dogg-bowl";
 import { johnRenehan } from "./stories/john-renehan";
 import { superSoaker } from "./stories/super-soaker";
+import { eyeForTalent } from "./stories/eye-for-talent";
 
 export const stories: Story[] = [
+//  eyeForTalent,
 //  superSoaker,
   johnRenehan,
   snoopDoggBowl,

@@ -8,7 +8,10 @@ export const snoopDoggBowl: Story = {
   featured: false,
   summary:
     "A canned cocktail, a black lowrider, and the strangest field in college football.",
+seoTitle: "The Snoop Dogg Arizona Bowl: How Gin & Juice Changed a Bowl Game",
 
+seoDescription:
+  "Snoop Dogg’s Gin & Juice became the first alcohol brand to present an NCAA-certified bowl game. Then he turned the Arizona Bowl into something bigger than a sponsorship.",
   hero: {
     src: "/images/snoop-dogg-bowl/hero.png",
     alt: "A college football field decorated with Snoop Dogg, lowrider and Gin & Juice branding",
