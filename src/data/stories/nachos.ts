@@ -8,7 +8,10 @@ export const nachos: Story = {
   featured: false,
   summary:
     "Four women wanted something different. He had no idea what he was going to make.",
+seoTitle: "Who Invented Nachos? The Story of Ignacio Anaya",
 
+seoDescription:
+  "Nachos were named after Ignacio 'Nacho' Anaya, who improvised the dish for four customers in 1943. Then his name traveled far beyond Mexico.",
   hero: {
     src: "/images/nachos/hero.png",
     alt: "A man preparing food in the kitchen as he listens to the patrons in the next room",

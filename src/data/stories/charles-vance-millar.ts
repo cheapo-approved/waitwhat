@@ -15,7 +15,10 @@ export const charlesVanceMillar: Story = {
   summary:
 
     "Charles Vance Millar had one last experiment in mind.",
+seoTitle: "Charles Vance Millar and the Great Stork Derby",
 
+seoDescription:
+  "When Charles Vance Millar died, he left his fortune to the Toronto mother who gave birth to the most children in ten years. Then the Great Depression hit.",
   hero: {
 
     src: "/images/charles-vance-millar/hero.png",

@@ -8,7 +8,10 @@ export const sergioMendes: Story = {
   featured: false,
   summary:
     "A love song, an extremely patient wife, and the largest name on the record.",
+seoTitle: "Who Really Sang Sergio Mendes’ “Never Gonna Let You Go”?",
 
+seoDescription:
+  "Sergio Mendes had a huge 1983 hit with “Never Gonna Let You Go.” He didn’t sing it, write it, arrange it—or even play keyboards on the recording.",
   hero: {
     src: "/images/sergio-mendes/hero.png",
     alt: "A musician standing behind a keyboard during a polished 1980s recording session",

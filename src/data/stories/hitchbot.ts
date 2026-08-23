@@ -8,7 +8,10 @@ export const hitchbot: Story = {
   featured: false,
   summary:
     "Sometimes the strangest experiments tell us the most about ourselves.",
+seoTitle: "HitchBOT: The Hitchhiking Robot That Trusted Humans",
 
+seoDescription:
+  "HitchBOT hitchhiked across Canada and Europe relying entirely on strangers for rides. Then the social experiment brought the little robot to America.",
   hero: {
     src: "/images/hitchbot/hero.png",
     alt: "HitchBOT getting into a car on the side of a highway",

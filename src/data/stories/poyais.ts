@@ -8,7 +8,10 @@ export const poyais: Story = {
   featured: false,
   summary:
     "Some dreams are worth leaving home for.",
+seoTitle: "Poyais: Gregor MacGregor’s Fake Country Scam",
 
+seoDescription:
+  "In the 1820s, Gregor MacGregor sold settlers land in a country called Poyais. Families crossed the Atlantic expecting a new life—and found something else.",
   hero: {
     src: "/images/poyais/hero.png",
     alt: "A hopeful Scottish family gazing toward a ship bound for a lush tropical coastline in the early 1820s",

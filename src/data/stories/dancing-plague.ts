@@ -7,7 +7,10 @@ export const dancingPlague: Story = {
   readTime: "4 min read",
   featured: false,
   summary: "One woman dancing was strange. The second made it contagious.",
+seoTitle: "The Dancing Plague of 1518: Why Strasbourg Couldn't Stop Dancing",
 
+seoDescription:
+  "In 1518, one woman began dancing in the streets of Strasbourg. Soon hundreds reportedly joined her—and more than 500 years later, nobody knows exactly why.",
   hero: {
     src: "/images/dancing-plague/hero.png",
     alt: "A cinematic medieval European town at dusk with mysterious figures dancing in the streets",

@@ -8,7 +8,10 @@ export const dymaxion: Story = {
   featured: false,
   summary:
     "Chicago came to see the future. Nobody expected it to look like...that.",
+seoTitle: "The Dymaxion Car: Buckminster Fuller’s 1933 Vision of the Future",
 
+seoDescription:
+  "Buckminster Fuller’s Dymaxion was a three-wheeled, 11-passenger car that looked like an airplane without wings. But Fuller was imagining something much bigger.",
   hero: {
     src: "/images/dymaxion/hero.png",
     alt: "1933 Chicago's World Fair",

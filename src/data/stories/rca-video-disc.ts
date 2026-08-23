@@ -8,7 +8,10 @@ export const rcaVideoDisc: Story = {
   featured: false,
   summary:
     "It looked familiar...until it didn't.",
+seoTitle: "RCA SelectaVision: The Movie Disc That Played With a Needle",
 
+seoDescription:
+  "RCA spent 17 years and hundreds of millions of dollars developing a movie format that worked like a record player. It launched in 1981 as SelectaVision.",
   hero: {
     src: "/images/rca-video-disc/hero.png",
     alt: "Records and a vintage CRT television",

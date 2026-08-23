@@ -8,7 +8,10 @@ export const donaldKendall: Story = {
   featured: false,
   summary:
     "No, they weren't planning to invade Coke.",
+seoTitle: "Why Pepsi Once Owned 17 Soviet Submarines",
 
+seoDescription:
+  "Pepsi once accepted 17 Soviet submarines as part of a massive deal with the USSR. The story began decades earlier with salesman Donald Kendall.",
   hero: {
     src: "/images/donald-kendall/hero.png",
     alt: "A cinematic Cold War era businessman overlooking Moscow with Nixon and Khrushchev holding Pepsis",

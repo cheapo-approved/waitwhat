@@ -8,6 +8,9 @@ export const candyBomber: Story = {
   featured: false,
   summary:
     "Every pound aboard the Berlin Airlift mattered. Then one pilot made room for something nobody needed.",
+  seoTitle: "The Candy Bomber: Gail Halvorsen and the Berlin Airlift",
+  seoDescription:
+    "During the Berlin Airlift, pilot Gail Halvorsen began dropping candy on tiny parachutes to children below. It started with two sticks of gum.",
   hero: {
     src: "/images/candy-bomber/hero.png",
     alt: "Berlin children running toward an American airplane",

@@ -7,7 +7,10 @@ export const gameline: Story = {
   readTime: "4 min read",
   featured: false,
   summary: "The future called. Nobody answered.",
+seoTitle: "GameLine: The Atari 2600 Service That Predicted the Internet",
 
+seoDescription:
+  "In 1983, GameLine let Atari 2600 owners download games over a phone line. Its creators had an even bigger idea—and one of them later helped launch AOL.",
   hero: {
     src: "/images/gameline/hero.png",
     alt: "A cinematic 1980s bedroom with an Atari, CRT television, and telephone",

@@ -8,7 +8,9 @@ export const acousticKitty: Story = {
   featured: false,
   summary:
     "It sounds like satire. The Cold War called it a good idea.",
-
+seoTitle: "Acoustic Kitty: The CIA’s $20 Million Spy Cat",
+seoDescription:
+  "In the 1960s, the CIA tried turning a cat into a listening device. The bizarre Cold War project was called Acoustic Kitty.",
   hero: {
     src: "/images/acoustic-kitty/hero.png",
     alt: "A cinematic 1960s Cold War scene with a mysterious cat walking away from two men on a park bench",

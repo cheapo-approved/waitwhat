@@ -8,6 +8,8 @@ export interface StoryImage {
 export interface Story {
   slug: string;
   title: string;
+  seoTitle?: string;
+  seoDescription?: string;
   category: string;
   readTime: string;
   hero?: StoryImage;

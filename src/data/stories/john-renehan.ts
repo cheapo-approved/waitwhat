@@ -8,7 +8,10 @@ export const johnRenehan: Story = {
   featured: true,
   summary:
     "A complicated father, a son who kept showing up, and a family with pieces missing.",
+seoTitle: "John Renehan Cremated His Father—Then Saw Him Alive on TV",
 
+seoDescription:
+  "John Renehan believed his missing father was dead and had him cremated. Five years later, he turned on the television and recognized a familiar face.",
   hero: {
     src: "/images/john-renehan/hero.png",
     alt: "A man watching daytime television in a modest Manchester home",

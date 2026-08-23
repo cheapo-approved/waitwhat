@@ -8,7 +8,10 @@ export const timothyDexter: Story = {
   featured: false,
   summary:
     "The more I learned about Timothy Dexter... the less certain I became.",
+seoTitle: "Timothy Dexter: The Eccentric Millionaire Nobody Could Figure Out",
 
+seoDescription:
+  "Timothy Dexter made fortunes from seemingly terrible ideas, wrote a bizarre bestselling book and staged his own funeral. Was he lucky, brilliant—or both?",
   hero: {
     src: "/images/timothy-dexter/hero.png",
     alt: "A cinematic portrait of an eccentric 18th-century New England businessman standing near a busy seaport",

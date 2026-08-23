@@ -8,7 +8,10 @@ export const emuWar: Story = {
   featured: false,
   summary:
     "Some battles begin long before you know what you're fighting.",
+seoTitle: "The Great Emu War: When Australia Sent Soldiers to Fight Emus",
 
+seoDescription:
+  "In 1932, Australian farmers asked the government for help protecting their wheat. The response involved soldiers, machine guns—and thousands of emus.",
   hero: {
     src: "/images/emu-war/hero2.png",
     alt: "Australian wheat fields under a dramatic sky with unseen danger approaching",

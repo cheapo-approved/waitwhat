@@ -8,7 +8,9 @@ export const brat: Story = {
   featured: false,
   summary:
     "There had to be a reason.",
-
+seoTitle: "Subaru BRAT: Why It Had Seats in the Truck Bed",
+seoDescription:
+  "The Subaru BRAT came with two bizarre rear-facing seats in its pickup bed. The reason traces back to a 25 percent tariff and a fight over chickens.",
   hero: {
     src: "/images/brat/hero.png",
     alt: "Vintage Subaru BRAT driving along a rugged coastal road at sunset",

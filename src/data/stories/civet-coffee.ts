@@ -15,6 +15,10 @@ export const civetCoffee: Story = {
   summary:
 
     "One forgotten decision transformed a plantation survival story into one of the world's greatest luxuries.",
+seoTitle: "Civet Coffee: Why the World’s Most Expensive Coffee Comes From Poop",
+
+seoDescription:
+  "Civet coffee became famous for beans collected after passing through civets. Its stranger origin story begins with plantation workers who weren’t allowed to drink the coffee they grew.",
 
   hero: {
 

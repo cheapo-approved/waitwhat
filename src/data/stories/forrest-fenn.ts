@@ -8,7 +8,10 @@ export const forrestFenn: Story = {
   featured: false,
   summary:
     "Everyone knows how it ended. Almost nobody knows how it began.",
+seoTitle: "Forrest Fenn’s Treasure: Why He Hid a Fortune in the Rockies",
 
+seoDescription:
+  "Forrest Fenn hid a chest filled with gold in the Rocky Mountains and left behind a poem with nine clues. But the treasure hunt wasn't his original plan.",
   hero: {
     src: "/images/forrest-fenn/hero.png",
     alt: "Forrest Fenn sitting in the Rocky Mountains beside a bronze treasure chest",

@@ -7,7 +7,10 @@ export const romanConcrete: Story = {
   readTime: "4 min read",
   featured: false,
   summary: "The longer it survived...the less sense it made.",
+seoTitle: "Roman Concrete: The Ancient Secret Behind Its Self-Healing Strength",
 
+seoDescription:
+  "Ancient Roman concrete has survived for nearly 2,000 years. Scientists discovered that the white chunks once dismissed as flaws may help the concrete heal its own cracks.",
   hero: {
     src: "/images/roman-concrete/hero.png",
     alt: "A cinematic ancient Roman seawall being hit by waves at sunrise",

@@ -8,6 +8,9 @@ export const brianRobson: Story = {
   featured: false,
   summary:
     "Australia sounded like freedom. Getting home was another story.",
+seoTitle: "Brian Robson: The Man Who Mailed Himself Home",
+seoDescription:
+  "In 1965, Brian Robson couldn't afford a ticket home from Australia. So the 19-year-old climbed into a wooden crate and shipped himself to Britain.",
   hero: {
     src: "/images/brian-robson/hero.png",
     alt: "Brian Robson standing by a wooden shipping crate bound for home",

@@ -7,7 +7,9 @@ export const antikythera: Story = {
   readTime: "4 min read",
   featured: false,
   summary: "The hunk of metal that refused to make a good first impression.",
-
+seoTitle: "The Antikythera Mechanism: Ancient Greece’s Computer",
+seoDescription:
+  "The Antikythera Mechanism looked like a corroded hunk of metal. Inside was an ancient machine capable of tracking the heavens and predicting eclipses.",
   hero: {
     src: "/images/antikythera/hero.png",
     alt: "A cinematic underwater scene of a sponge diver exploring an ancient Mediterranean shipwreck",

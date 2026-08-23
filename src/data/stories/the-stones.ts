@@ -6,6 +6,10 @@ const story = {
   readTime: "4 min read",
   featured: false,
   category: "History",
+  seoTitle: "Rai Stones of Yap: The Giant Rocks Used as Money",
+
+seoDescription:
+  "For centuries, the people of Yap used enormous stone discs as money. Some were never moved—and one famous stone remained valuable even after sinking into the ocean.",
   hero: {
   src: "/images/the-stones/hero.png",
   alt: "Giant rai stone wheels on the island of Yap",
@@ -20,13 +24,13 @@ const story = {
   },
   {
     src: "/images/the-stones/2.jpg",
-    alt: "Pacific island coastline with canoes and palm trees",
+    alt: "Close-up of a large stone wheel on the island of Yap",
     caption: "Every stone had already survived an impossible journey.",
     after: 65,
   },
   {
     src: "/images/the-stones/3.jpg",
-    alt: "Stone money of Yap surrounded by tropical landscape",
+    alt: "Pacific island coastline with canoes and palm trees",
     caption: "The story became part of the stone.",
     after: 91,
   },

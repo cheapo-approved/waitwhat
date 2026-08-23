@@ -8,7 +8,10 @@ export const explodingWhale: Story = {
   featured: false,
   summary:
     "What do you do when you're in charge of cleanup duty?",
+seoTitle: "The Exploding Whale: Oregon’s Infamous 1970 Whale Explosion",
 
+seoDescription:
+  "In 1970, Oregon officials had to remove an eight-ton whale from a beach. Their solution involved half a ton of dynamite—and things did not go as planned.",
   hero: {
     src: "/images/exploding-whale/hero.png",
     alt: "A cinematic Oregon beach scene with officials standing near a massive whale carcass",

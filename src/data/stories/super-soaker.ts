@@ -8,7 +8,10 @@ export const superSoaker: Story = {
   featured: true,
   summary:
     "A rocket scientist walked into a toy company with a pink suitcase.",
+seoTitle: "Who Invented the Super Soaker? The Story of Lonnie Johnson",
 
+seoDescription:
+  "NASA engineer Lonnie Johnson accidentally invented the Super Soaker while experimenting with a heat pump. Getting someone to believe in it took years.",
   hero: {
     src: "/images/super-soaker/hero.png",
     alt: "An inventor examining a homemade water gun prototype in a workshop",

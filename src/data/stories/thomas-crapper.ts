@@ -8,7 +8,10 @@ export const thomasCrapper: Story = {
   featured: false,
   summary:
     "A plumber became the butt of the joke. The real story is even better.",
+seoTitle: "Did Thomas Crapper Invent the Toilet? The Truth Behind the Myth",
 
+seoDescription:
+  "Thomas Crapper didn’t invent the toilet, and it wasn’t named after him. So how did a Victorian plumber become the most famous name in bathroom history?",
   hero: {
     src: "/images/thomas-crapper/hero.png",
     alt: "A cinematic Victorian bathroom showroom with polished brass fixtures and a proud shop owner",
