@@ -25,7 +25,7 @@ import { sergioMendes } from "./stories/sergio-mendes";
 import { snoopDoggBowl } from "./stories/snoop-dogg-bowl";
 import { johnRenehan } from "./stories/john-renehan";
 import { superSoaker } from "./stories/super-soaker";
-import { spud, spudWebb } from "./stories/spud-webb";
+import { spudWebb } from "./stories/spud-webb";
 //import { eyeForTalent } from "./stories/eye-for-talent";
 
 export const stories: Story[] = [
