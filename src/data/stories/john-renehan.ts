@@ -5,7 +5,7 @@ export const johnRenehan: Story = {
   title: "Looking for Dad",
   category: "Human Nature",
   readTime: "6 min read",
-  featured: true,
+  featured: false,
   summary:
     "A complicated father, a son who kept showing up, and a family with pieces missing.",
 seoTitle: "John Renehan Cremated His Father—Then Saw Him Alive on TV",

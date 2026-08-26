@@ -5,7 +5,7 @@ export const superSoaker: Story = {
   title: "The Guy With the Water Gun",
   category: "Human Nature",
   readTime: "6 min read",
-  featured: true,
+  featured: false,
   summary:
     "A rocket scientist walked into a toy company with a pink suitcase.",
 seoTitle: "Who Invented the Super Soaker? The Story of Lonnie Johnson",
