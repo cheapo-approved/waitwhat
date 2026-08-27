@@ -5,7 +5,7 @@ export const spudWebb: Story = {
   title: "The Man They Couldn’t See",
   category: "Human Nature",
   readTime: "7 min read",
-  featured: true,
+  featured: false,
   summary:
     "Spud Webb became famous for flying. He just wanted to play basketball.",
   seoTitle: "Spud Webb: The Man Behind the 1986 Slam Dunk Contest",
