@@ -282,13 +282,39 @@ export const dollyParton: Story = {
 
     "Then more countries.",
 
-    "By the end of 2025, Dolly Parton's Imagination Library had given away more than 304 million books.",
+    "Dolly Parton's Imagination Library has given away more than 330 million books.",
 
     "Dolly said her father was prouder of people calling her “the Book Lady” than almost anything else she'd accomplished.",
 
+    "There was something else about the Book Lady.",
+
+    "Dolly never had children of her own.",
+
+    "She once wondered what they might have looked like. What kind of mother she might have been.",
+
+    "But later in life, she came to see it differently. Maybe, she said, God hadn't meant for her to have children so that everybody's children could be hers.",
+
+    "In a way, that's what happened.",
+
+    "Millions of kids grew up with a Dolly Parton book arriving at their house every month. Some of them knew the Book Lady before they knew the country singer.",
+
+    "When they turned five and graduated from the program, Dolly sent one last book. Inside was a letter from her encouraging them to keep reading, keep dreaming and keep learning.",
+
+    "She signed it: “I Will Always Love You, Dolly.”",
+
+    "And then there was Miley Cyrus.",
+
+    "Dolly was her godmother. Not just in name.",
+
+    "She watched Miley grow up. She appeared with her on Hannah Montana. They sang together. And when Miley wasn't sure she wanted to perform at the Grammys in 2024, Dolly was still there, telling her to get out there and be herself.",
+
+    "Miley called her Aunt Dolly.",
+
+    "The woman who never had children somehow ended up with an awful lot of them.",
+    
     "---",
 
-    "Dolly Parton died this week at 80.",
+    "Dolly Parton died on August 25, 2026. She was 80 years old.",
 
     "For most of her life, she made damn sure nobody else got to decide what Dolly Parton was worth.",
 
