@@ -27,10 +27,10 @@ import { johnRenehan } from "./stories/john-renehan";
 import { superSoaker } from "./stories/super-soaker";
 import { spudWebb } from "./stories/spud-webb";
 import { dollyParton } from "./stories/dolly-parton";
-//import { eyeForTalent } from "./stories/eye-for-talent";
+import { eyeForTalent } from "./stories/eye-for-talent";
 
 export const stories: Story[] = [
-//  eyeForTalent,
+  eyeForTalent,
   dollyParton,
   spudWebb,
   superSoaker,
